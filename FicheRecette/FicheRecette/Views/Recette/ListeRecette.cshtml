@@ -4,25 +4,10 @@
 <div class="Titre">
     <h1 class="col-lg-12">Liste des Recettes</h1>
 </div>
-<div class="row filtre">
-    <form asp-controller="Recette" asp-action="Index" method="get">
-        <div class="col-lg-9">
-            <select name="idCategory" class="form-control">
-                <option></option>
-                @foreach (Category c in (ViewBag.categories as List<Category>))
-                {
-                    <option value="@c.Id">@c.Titre</option>
-                }
-            </select>
-        </div>
-        <div class="col-lg-3">
-            <button type="submit" class="btn btn-default">Filtrer</button>
-        </div>
-    </form>
-</div>
 
-<div class="container">
-    @*<h1>Liste des Recettes <a asp-action="AjouterRecette" asp-controller="Recette">Ajouter une recette</a></h1>*@
+
+<div class="container Recette">
+
     @if (Model.Count == 0)
     {
         <div>
@@ -30,17 +15,34 @@
         </div>
     }
 
+    <div class="row filtre">
+        <form asp-controller="Recette" asp-action="Index" method="get">
+            <div class="col-lg-9">
+                <select name="idCategory" class="form-control">
+                    <option></option>
+                    @foreach (Category c in (ViewBag.categories as List<Category>))
+                    {
+                        <option value="@c.Id">@c.Titre</option>
+                    }
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <div><button type="submit" class="btn btn-default">Filtrer</button></div>                
+            </div>
+        </form>
+    </div>
+
     @foreach (Recette r in Model)
     {
-        <div class="recette">
-            <div class="col-lg-2">
+        <div class="row RecetteLine">
+            <div class="col-lg-2 centerimages">
                 <div class="imgRecette">
                     <img src="~/@r.Images[0].Url" />
                 </div>
             </div>
             <div class="col-lg-8">
-                <div class="titreRecette">
-                    <div class="col-lg-12">@r.NomRecette</div>
+                <div class="row">
+                    <div class="col-lg-12 titreRecette">@r.NomRecette</div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">Nombre de personne(s) : @r.NbPersonne</div>
@@ -56,10 +58,12 @@
                 <div class="row">
                     <div class="col-lg-12">@r.Date</div>
                 </div>
-                <div class="col-lg-12">
-                    <a class="btn btn-default">Detail</a>
+                <div class="row">
+                    <div class="col-lg-12 ButtonD">
+                        <a class="btn btn-default">Detail</a>
+                    </div>
                 </div>
             </div>
         </div>
-     }
+    }
 </div>

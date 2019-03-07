@@ -71,12 +71,12 @@ using FicheRecette.Models;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(27, 258, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "606ed1c131c343b28b007be17cb4fe5d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "277d3af9baae4a75bb8e3912cfdae649", async() => {
                 BeginContext(33, 104, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>La Casa del Tonino</title>\r\n    ");
                 EndContext();
                 BeginContext(137, 55, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "050ba54a1fdb4b88aebe8c9421f5cf49", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "34d6e270bb294afd94caa14de892449a", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -95,7 +95,7 @@ using FicheRecette.Models;
                 WriteLiteral("\r\n    \r\n    ");
                 EndContext();
                 BeginContext(204, 70, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1398fd19fa874819a331f32e25ea0aa2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "31122187e6ea4421bc7b74a6dc64adf5", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -129,14 +129,14 @@ using FicheRecette.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(287, 2286, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f0e43fb449a2429daa18a4f08c5c56c2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3953e33860224702ab084f75e4238147", async() => {
                 BeginContext(293, 204, true);
                 WriteLiteral("\r\n    <header>\r\n        <nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n            <div class=\"container\">\r\n                <div class=\"row barreTitre\">\r\n                    <div class=\"col-lg-12\">");
                 EndContext();
                 BeginContext(497, 110, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "48f382c470834f4f81694038641a3ceb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c1199b65774948fd8bc593e35ea03fed", async() => {
                     BeginContext(572, 31, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "9579c7404cfb423cbee3d4c1802610f6", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8fcbe13473794776bfddd36db983afde", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -182,7 +182,7 @@ using FicheRecette.Models;
                 WriteLiteral("                        <div class=\"col-lg-2 barreBouton\">\r\n                            ");
                 EndContext();
                 BeginContext(914, 88, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "703d124ac0f84c1880234def531a61b9", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5801996da634e6f9c70ca627a5ab4da", async() => {
                     BeginContext(980, 18, true);
                     WriteLiteral("Liste des Recettes");
                     EndContext();
@@ -208,7 +208,7 @@ using FicheRecette.Models;
                 WriteLiteral("\r\n                        </div>\r\n                        <div class=\"col-lg-2 barreBouton\">\r\n                            ");
                 EndContext();
                 BeginContext(1124, 92, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "69da1a80266f48248f71eb060ed452e8", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0724db0212cc4fbb965547abdd05de43", async() => {
                     BeginContext(1192, 20, true);
                     WriteLiteral("Ajouter une Recettes");
                     EndContext();
@@ -234,7 +234,7 @@ using FicheRecette.Models;
                 WriteLiteral("\r\n                        </div>\r\n                        <div class=\"col-lg-1 barreBouton\">\r\n                            ");
                 EndContext();
                 BeginContext(1338, 91, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28eb3577918f4661be00a5afa6dfc18c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8838172fa5d4a10a7ca99e3589fa419", async() => {
                     BeginContext(1413, 12, true);
                     WriteLiteral("Utilisateurs");
                     EndContext();
@@ -260,7 +260,7 @@ using FicheRecette.Models;
                 WriteLiteral("\r\n                        </div>\r\n                        <div class=\"col-lg-1 barreBouton\">\r\n                            ");
                 EndContext();
                 BeginContext(1551, 84, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b9bb001df08740698022086fab1f6e20", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bde2a2e96fb54251b0ffabbbabfa71b4", async() => {
                     BeginContext(1621, 10, true);
                     WriteLiteral("Catégories");
                     EndContext();
@@ -286,7 +286,7 @@ using FicheRecette.Models;
                 WriteLiteral("\r\n                        </div>\r\n                        <div class=\"col-lg-1 barreBouton\">\r\n                            ");
                 EndContext();
                 BeginContext(1757, 83, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ce9535a33d064b37a1153114ed1c4ac5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af8aa4380a754fb495d849729e87cc64", async() => {
                     BeginContext(1826, 10, true);
                     WriteLiteral("Difficulté");
                     EndContext();
@@ -322,7 +322,7 @@ using FicheRecette.Models;
                 WriteLiteral(" - </span>");
                 EndContext();
                 BeginContext(2011, 71, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54744675f97244978dbfd250858b1907", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "714d477707a5434585242357a76cba68", async() => {
                     BeginContext(2063, 15, true);
                     WriteLiteral(" Se Déconnecter");
                     EndContext();
@@ -356,7 +356,7 @@ using FicheRecette.Models;
                 WriteLiteral("                        <div class=\"col-lg-offset-10 col-lg-2\">\r\n                            ");
                 EndContext();
                 BeginContext(2281, 79, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "49d751d84cb74210bed35856ea26f84f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b8110d92121548df8505d3abd309b77b", async() => {
                     BeginContext(2344, 12, true);
                     WriteLiteral("Se connecter");
                     EndContext();

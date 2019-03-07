@@ -19,7 +19,7 @@ namespace FicheRecette.Tools
                 {
                     if (_instance == null)
                     {
-                        _instance = new SqlConnection(@"Data Source=np:\\.\pipe\LOCALDB#7FCECADF\tsql\query;Initial Catalog=listerecette;Integrated Security=True");
+                        _instance = new SqlConnection(@"Data Source=np:\\.\pipe\LOCALDB#F53744BF\tsql\query;Initial Catalog=listerecette;Integrated Security=True");
                     }
                     return _instance;
                 }

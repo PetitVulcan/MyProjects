@@ -1,0 +1,101 @@
+BDD SQL ListeRecette
+
+//Table Utilisateur
+
+CREATE TABLE [dbo].[utilisateur] (
+    [Id]             INT          IDENTITY (1, 1) NOT NULL,
+    [date]           DATETIME     NULL,
+    [nom]            VARCHAR (50) NULL,
+    [prenom]         VARCHAR (50) NULL,
+    [nomutilisateur] VARCHAR (50) NULL,
+    [email]          VARCHAR (50) NULL,
+    [nbrecettecree]  INT          NULL,
+    [mdp]            VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+//Table Recettes
+
+CREATE TABLE [dbo].[recette] (
+    [Id]             INT          IDENTITY (1, 1) NOT NULL,
+    [date]           DATETIME     NULL,
+    [nomutilisateur] VARCHAR (20) NULL,
+    [nomrecette]     VARCHAR (50) NULL,
+    [nbpersonne]     INT          NULL,
+    [difficulte]     VARCHAR (5)  NULL,
+    [ingredient]     NTEXT        NULL,
+    [realisation]    NTEXT        NULL,
+    [IdCategory]     INT          NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+//Script Insertion Recettes
+
+INSERT INTO recette (Date,nomutilisateur,nomrecette,nbpersonne,difficulte,ingredient,realisation,IdCategory)
+VALUES 
+(02/03/2019,'Nini','Crevette Kao Pad Kaï', 4 ,'**','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus lectus, faucibus eu maximus ut, imperdiet ut neque.',12),
+(03/03/2019,'Nuanda','Sole à la mousseline de Riesling', 4 ,'**','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus lectus, faucibus eu maximus ut, imperdiet ut neque.',1),
+(04/03/2019,'Nuanda','Spaghetti alla Bolognese', 4 ,'**','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus lectus, faucibus eu maximus ut, imperdiet ut neque.',6),
+(05/03/2019,'Nini','Chili Sin Carne', 6 ,'**','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus lectus, faucibus eu maximus ut, imperdiet ut neque.',7),
+(06/03/2019,'Nini','Gigot de 7 heures', 4 ,'**','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus lectus, faucibus eu maximus ut, imperdiet ut neque.',1),
+(05/03/2019,'Nuanda','Spaghetti alla Carbonara', 4 ,'**','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus lectus, faucibus eu maximus ut, imperdiet ut neque.',6),
+(06/03/2019,'Nuanda','Tempura de Légumes', 4 ,'**','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus lectus, faucibus eu maximus ut, imperdiet ut neque.',5),
+(07/03/2019,'Nini','Poulet au curry', 6 ,'**','Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus purus lectus, faucibus eu maximus ut, imperdiet ut neque.',4);
+
+
+
+//Table Nombre de Personnes
+
+CREATE TABLE [dbo].[nbpersonne] (
+    [Id]          INT IDENTITY (1, 1) NOT NULL,
+    [nbpersonnes] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+//Table Images
+
+CREATE TABLE [dbo].[images] (
+    [Id]        INT           IDENTITY (1, 1) NOT NULL,
+    [Idrecette] INT           NOT NULL,
+    [urlimage]  VARCHAR (MAX) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+//Script Insertion Images
+
+INSERT INTO images (Idrecette,urlimage)
+VALUES
+( 1 ,'images/recette/1-Kao_Pad_Kai.jpg'),
+( 2 ,'images/recette/2-Sole_Riesling.jpg'),
+( 3 ,'images/recette/3-spaghetti_bolognese.jpg'),
+( 4 ,'images/recette/4-Chili_sin_carne.jpg'),
+( 5 ,'images/recette/5-Gigot_de_7_heures.jpg'),
+( 6 ,'images/recette/6-Spaghetti_alla_Carbonara.jpg'),
+( 7 ,'images/recette/7-Tempura_de_gambas.jpg'),
+( 8 ,'images/recette/8-Poulet_Curry_Jaune.jpg');
+
+
+
+//Table Difficulté
+
+CREATE TABLE [dbo].[difficulte] (
+    [Id]    INT          IDENTITY (1, 1) NOT NULL,
+    [titre] VARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+//Table Categories
+
+CREATE TABLE [dbo].[Category] (
+    [Id]    INT          IDENTITY (1, 1) NOT NULL,
+    [Titre] VARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
