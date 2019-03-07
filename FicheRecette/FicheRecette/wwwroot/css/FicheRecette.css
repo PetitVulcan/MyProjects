@@ -1,0 +1,84 @@
+﻿
+.barreTitre{
+    height : 100px;
+}
+.barreTitre img {
+    width:100%
+}
+.barreBouton {
+    Color: white;
+}
+header  {
+    height:130px
+}
+body .navbar-inverse {
+    background-color:gray;
+    Color: white; 
+}
+header nav a, .UserInfo {
+    color: #FFF;
+    font-size: 16px;
+    font-family: Virginie
+}
+
+header nav a:hover {
+    color: dodgerblue
+}
+.container {
+    color: gray;
+    font-family: Virginie
+}
+.Titre {
+    text-align: center;
+}
+.wrapper {
+    background-color: lightblue;
+    width:100%;
+    margin: auto;
+    padding: 50px;
+    box-shadow: 0 0 5px #999;
+}
+body {
+    background-color: gray;
+}
+h2 {
+    
+    margin: 50px;
+}
+
+.AjouterRecette {
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    margin: 15px;
+}
+.imgRecette img {
+    text-align: center;
+    width: 100px;
+    height: 100px
+}
+
+.titreRecette {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    margin: 0;
+}
+
+.Recette {
+    padding: 5px;
+    border: 1px solid gray;
+    margin-top: 10px;
+    background-color: lightgray;
+}
+
+.filtre .btn {
+    width: 100%
+}
+
+.filtre {
+    padding: 5px
+}

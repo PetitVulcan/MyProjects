@@ -1,0 +1,108 @@
+﻿@using FicheRecette.Model; 
+
+<div class="row">
+    <div class="col-lg-12">
+        @if ((ViewBag.errors != null))
+        {
+            if ((ViewBag.errors as List<string>).Count > 0)
+            {
+                <div class="row">
+                    <div class="col-lg-12 alert alert-danger">
+                        @foreach (string e in (ViewBag.errors as List<string>))
+                        {
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    @e
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="Inscription">
+            <div class="row">
+                <h2 class="col-lg-12">S'inscrire</h2>
+            </div>
+
+            @if (ViewBag.Inscription != null)
+            {
+                if (ViewBag.Inscription)
+                {
+                    <div class="row">
+                        <div class="col-lg-12 alert alert-success">
+                            @ViewBag.Message
+                        </div>
+                    </div>
+                }
+            }
+                    <form asp-controller="Utilisateur" asp-action="AjouterUtilisateur" method="post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" value="@Model.Nom" name="nom" placeholder="Votre Nom" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" value="@Model.Prenom" name="prenom" placeholder="Votre Prénom" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" value="@Model.NomUtilisateur" name="NomUtilisateur" placeholder="Votre nom d'utilisateur" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" value="@Model.EMail" name="email" placeholder="Votre Email" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="password" class="form-control" value="@Model.Mdp" name="Mdp" placeholder="Votre mot de passe" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="password" class="form-control" name="cMdp" placeholder="Confirmer votre mot de passe" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button class="form-control btn btn-default" type="submit">S'inscrire</button>
+                            </div>
+                        </div>
+                    </form>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="Login">
+            <div class="row">
+                <h2 class="col-lg-12">Se connecter</h2>
+            </div>
+            <form asp-controller="Utilisateur" asp-action="ConnectionMdp">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input type="text" class="form-control" name="nomUtilisateur" placeholder="Votre nom d'utilisateur" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input type="password" class="form-control" name="mdp" placeholder="Votre mot de passe" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button class="form-control btn btn-default" type="submit">Se connecter</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

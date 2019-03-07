@@ -1,0 +1,115 @@
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.deps.json
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.runtimeconfig.json
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.runtimeconfig.dev.json
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.dll
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csprojAssemblyReference.cache
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CoreCompileInputs.cache
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorAssemblyInfo.cache
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorAssemblyInfo.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.AssemblyInfoInputs.cache
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.AssemblyInfo.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.TagHelpers.input.cache
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.TagHelpers.output.cache
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorCoreGenerate.cache
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\AjouterRecette.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\ListeRecette.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_layoutFicheRecette.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\AjouterUtilisateur.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\Connection.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\ListeUtilisateur.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorTargetAssemblyInfo.cache
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorTargetAssemblyInfo.cs
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.Views.pdb
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.dll
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.pdb
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.pdb
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.Views.dll
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.Views.pdb
+D:\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CopyComplete
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.deps.json
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.runtimeconfig.json
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.runtimeconfig.dev.json
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.dll
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.pdb
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.Views.dll
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.Views.pdb
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csprojAssemblyReference.cache
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CoreCompileInputs.cache
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorAssemblyInfo.cache
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorAssemblyInfo.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.AssemblyInfoInputs.cache
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.AssemblyInfo.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.TagHelpers.input.cache
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.TagHelpers.output.cache
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorCoreGenerate.cache
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\AjouterRecette.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\ListeRecette.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_layoutFicheRecette.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\AjouterUtilisateur.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\Connection.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\ListeUtilisateur.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorTargetAssemblyInfo.cache
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorTargetAssemblyInfo.cs
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.Views.pdb
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.dll
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.pdb
+C:\Users\Nuanda\Desktop\SAVE M2i\ASP.NET Core\PERSO\FicheRecette\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CopyComplete
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csprojAssemblyReference.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CoreCompileInputs.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorAssemblyInfo.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorAssemblyInfo.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.AssemblyInfoInputs.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.AssemblyInfo.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.dll
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.pdb
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.deps.json
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.runtimeconfig.json
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.runtimeconfig.dev.json
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.dll
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.pdb
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.Views.dll
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.Views.pdb
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.TagHelpers.input.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.TagHelpers.output.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorCoreGenerate.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\AjouterRecette.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\ListeRecette.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_layoutFicheRecette.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\Connection.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\ListeUtilisateur.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorTargetAssemblyInfo.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorTargetAssemblyInfo.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.Views.pdb
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CopyComplete
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\ListeDifficulte.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\ListeNbPersonne.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\ListeCategory.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Utilisateur\Index.g.cshtml.cs
+C:\Users\diper\Documents\Programation\Projets Personnels\FicheRecetteASP_NET\FicheRecette\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\Detail.g.cshtml.cs

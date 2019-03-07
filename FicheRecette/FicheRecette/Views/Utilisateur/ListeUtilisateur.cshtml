@@ -1,0 +1,49 @@
+﻿@using FicheRecette.Model;
+@model List<Utilisateur>;
+
+@{
+
+}
+
+<div class="Titre">
+    <h1>Liste des utilisateurs</h1>
+</div>
+<div>
+    @if (Model.Count == 0)
+    {
+        <div>
+            Aucun Utilisateur
+        </div>
+    }
+    @foreach (Utilisateur u in Model)
+    {
+        <div>
+            Nom d'utilisateur : @u.NomUtilisateur  - Adresse email : @u.EMail - Nombre de recettes(s) crée(s) :  @u.NbRecettecree - <a asp-action="SupprimerUtilsateur" asp-controller="Utilisateur" asp-route-id="@u.Id">Supprimer</a>
+        </div>
+    }
+</div>
+<div>
+    <h2>Ajouter Utilisateur</h2>
+    <form asp-action="AjouterUtilisateur" asp-controller="Utilisateur" method="post">
+        <div>
+            <label>Nom : </label>
+            <input type="text" name="Nom" />
+            <label>Prénom : </label>
+            <input type="text" name="Prenom" />
+            <label>Nom d'Utilisateur : </label>
+            <input type="text" name="NomUtilisateur" />
+            <label>email : </label>
+            <input type="text" name="Email" />
+            <label>Mot de Passe : </label>
+            <input type="password" name="Mdp" />
+            <label>Confirmer le mot de passe : </label>
+            <input type="password" name="cMdp" />
+        </div>
+        <div>
+            <button type="submit">Ajouter</button>
+        </div>
+    </form>
+</div>
+<div>
+
+
