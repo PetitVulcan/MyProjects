@@ -14,5 +14,5 @@ namespace FicheRecette
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
     }
-    //test
+    
 }
