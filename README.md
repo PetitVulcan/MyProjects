@@ -1,2 +1,2 @@
 # MyProject
-It's my first ASP.Net Core application.  I share my personal project to learn and train .NET FrameWork resources.
+It's my first repository to share personal projects for learn and train .NET FrameWork resources.
