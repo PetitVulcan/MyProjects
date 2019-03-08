@@ -1,0 +1,49 @@
+﻿<Window x:Class="FicheRecette.Utilisateur.AjouterUtilisateur"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FicheRecette.Utilisateur"
+        mc:Ignorable="d"
+        Title="AjouterUtilisateur" Height="340" Width="300">
+    <DockPanel Background="gray" >
+        <StackPanel>
+            <GroupBox Header="Identité" FontFamily="Virginie" Foreground="#FFFBFAFA">
+                <StackPanel>
+                    <TextBlock Foreground="#FFFBFAFA" FontFamily="Virginie" Text="Nom" Margin="5"></TextBlock>
+
+                    <TextBox x:Name="Nom" Text="{Binding Path=Nom}"></TextBox>
+
+                    <TextBlock Foreground="#FFFBFAFA" FontFamily="Virginie" Text="Prénom" Margin="5"></TextBlock>
+
+                    <TextBox x:Name="prenom" Text="{Binding Path=Prenom}"></TextBox>
+
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Coordonnées" FontFamily="Virginie" Foreground="#FFFBFAFA">
+                <StackPanel>
+                    <TextBlock Foreground="#FFFBFAFA" FontFamily="Virginie" Text="Mail" Margin="5" ></TextBlock>
+
+                    <TextBox x:Name="mail" Text="{Binding Path=Mail}"></TextBox>
+
+                    <TextBlock Foreground="#FFFBFAFA" FontFamily="Virginie" Text="Nom d'utilisateur" Margin="5"></TextBlock>
+
+                    <TextBox x:Name="NomUtilisateur" Text="{Binding Path=NomUtilisateur}"></TextBox>
+
+                </StackPanel>
+            </GroupBox>
+
+            <UniformGrid Height="84" >
+
+                <Button Content="Valider" Margin="5,10,5,5" Background="#FFA2A5B0" Foreground="#FFFBF7F7" BorderBrush="#FFF7F4F4" FontFamily="Virginie" Click="Button_Click"/>
+
+                <Button Content="Annuler" Margin="5,10,5,5" Background="#FFA2A5B0" Foreground="#FFFBF7F7" BorderBrush="#FFF7F4F4" FontFamily="Virginie" Click="Button_Click_1"/>
+    
+    </UniformGrid>
+
+
+        </StackPanel>
+
+    </DockPanel>
+</Window>

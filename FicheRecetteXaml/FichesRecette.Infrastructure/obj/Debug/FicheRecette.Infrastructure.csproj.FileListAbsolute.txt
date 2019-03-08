@@ -1,0 +1,4 @@
+G:\WPF\PERSO\FichesRecette\FicheRecette\FichesRecette.Infrastructure\obj\Debug\FicheRecette.Infrastructure.csprojAssemblyReference.cache
+G:\WPF\PERSO\FichesRecette\FicheRecette\FichesRecette.Infrastructure\obj\Debug\FicheRecette.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FichesRecetteXaml\FicheRecette\FichesRecette.Infrastructure\obj\Debug\FicheRecette.Infrastructure.csprojAssemblyReference.cache
+C:\Users\diper\Documents\Programation\Projets Personnels\FichesRecetteXaml\FicheRecette\FichesRecette.Infrastructure\obj\Debug\FicheRecette.Infrastructure.csproj.CoreCompileInputs.cache

@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="FicheRecette.ControleUtilisateur"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FicheRecette"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+   
+        
+        
+    <DockPanel Background="gray">
+        
+        <GroupBox Header="Informations de connection" FontFamily="Virginie" Foreground="#FFFFFEFE" Margin="5" FontSize="14">
+            
+            <StackPanel Margin="0,10" HorizontalAlignment="Center">
+                
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,10" >
+                    
+            <Label Foreground="#FFFFFEFE" FontSize="12" FontWeight="Normal">Nom d'Utilisateur</Label>
+
+                    <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="170" Text="{Binding Path=NomUtilisateur}"></TextBox>
+                    
+        </StackPanel>
+                
+            <StackPanel Orientation="Horizontal" Margin="0,10" HorizontalAlignment="Center">
+                
+                <Label Foreground="#FFFFFEFE" FontSize="12" FontWeight="Normal">Mot de passe</Label>
+
+                    <TextBox HorizontalAlignment="Top" VerticalContentAlignment="Stretch" Width="170" Text="{Binding Path=Mdp}"></TextBox>
+                
+            </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0,10" HorizontalAlignment="Center">
+                    
+                    <Button Content="Valider" Margin="5,0" Background="#FFA2A5B0" Foreground="#FFFBF7F7" BorderBrush="#FFF7F4F4"/>
+                    
+                <Button Content="S'inscrire" Margin="5,0" Foreground="#FFFBF5F5" BorderBrush="#FFF9F5F5" Background="#FFA2A5B0" Click=""/>
+                    
+                </StackPanel>
+                
+            </StackPanel>
+            
+        </GroupBox>
+        
+    </DockPanel>
+   
+</UserControl>

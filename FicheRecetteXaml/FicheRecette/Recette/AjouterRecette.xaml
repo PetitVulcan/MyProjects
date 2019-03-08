@@ -1,0 +1,62 @@
+﻿<Window x:Class="FicheRecette.Recette.AjouterRecette"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FicheRecette.Recette"
+        mc:Ignorable="d"
+        Title="AjouterRecette" Height="600" Width="400" Background="gray">
+    <Grid>
+        <StackPanel>
+            <GroupBox Header="Recette" FontFamily="Virginie" FontWeight="Bold" FontSize="14" Margin="5,5,5,0" Height="555" Foreground="#FFFBFAFA">
+                <StackPanel>
+                    <GroupBox Header="Informations" FontFamily="Virginie" FontWeight="Normal" FontSize="12" Foreground="#FFFBFAFA" Height="136" VerticalAlignment="Top">
+                        <UniformGrid Columns="2" Margin="0">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Foreground="#FFFFFEFE" FontSize="10" FontWeight="Normal">Nom</Label>
+                                    <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="170" Text="{Binding Path=NomRecette}"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Foreground="#FFFFFEFE" FontSize="10" FontWeight="Normal">Difficulté</Label>
+                                    <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="150" Text="{Binding Path=Difficulte}"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Foreground="#FFFFFEFE" FontSize="10" FontWeight="Normal">NbPersonne</Label>
+                                    <TextBox VerticalContentAlignment="Stretch" Width="144" HorizontalAlignment="Right" Text="{Binding Path=NbPersonne}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Foreground="#FFFFFEFE" FontSize="10" FontWeight="Normal">Nom Utilisateur</Label>
+                                    <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="110" Text="{Binding Path=NomUtilisateur}"></TextBox>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Margin="5,0,5,5">
+                                <StackPanel.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="Black" Offset="0"/>
+                                        <GradientStop Color="White" Offset="0.558"/>
+                                    </LinearGradientBrush>
+                                </StackPanel.Background>
+                                <Image/>
+                            </StackPanel>
+                        </UniformGrid>
+                    </GroupBox>
+
+                    <GroupBox Header="Ingrédients" FontFamily="Virginie" FontWeight="Normal" FontSize="12" Foreground="#FFFBFAFA" Height="98" >
+                        <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="358" Margin="0,0,0,2" Text="{Binding Path=Ingredient}"/>
+                    </GroupBox>
+                    <GroupBox Header="Réalisation" FontFamily="Virginie" FontWeight="Normal" FontSize="12" Foreground="#FFFBFAFA" Height="256" >
+                        <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="358" Margin="0,0,0,3" Text="{Binding Path=Realisation}"/>
+                    </GroupBox>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <Button Name="Annuler" Content="Annuler" Margin="0,5,5,0" FontFamily="Virginie" Background="#FFA2A5B0" BorderBrush="#FFFBFAFA" Foreground="White" HorizontalAlignment="Center" FontWeight="Normal" Click="Annuler_Click"/>
+                        <Button Name="Valider" Content="Ajouter" Margin="0,5,0,0" FontFamily="Virginie" Background="#FFA2A5B0" BorderBrush="#FFFBFAFA" Foreground="White" HorizontalAlignment="Center" FontWeight="Normal" Click="Valider_Click" />
+
+                    </StackPanel>
+
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
