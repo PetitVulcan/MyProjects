@@ -78,8 +78,9 @@ centerimages {
     margin: 0;
 }
 .row {
-    margin-right: -10px;
-    margin-left: -10px;
+
+    margin-right: 25px;
+    margin-left: 25px;
 }
 .Recette {
     padding: 5px;
@@ -91,8 +92,6 @@ centerimages {
     padding: 10px;
     border: 1px solid gray;
     margin: 10px;
-    margin-left:10px;
-    margin-right:10px;
     background-color: #FFFFFF;
 }
 
