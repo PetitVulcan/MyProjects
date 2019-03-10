@@ -12539,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diper\\source\\repos\\PetitVulcan\\MyProjects\\FicheRecette\\FicheRecette\\FicheRecette.csproj",
+      "projectUniqueName": "C:\\Users\\diper\\source\\repos\\PetitVulcan\\MyProjects\\FicheRecetteASP_NET_Core_MCV\\FicheRecette\\FicheRecette.csproj",
       "projectName": "FicheRecette",
-      "projectPath": "C:\\Users\\diper\\source\\repos\\PetitVulcan\\MyProjects\\FicheRecette\\FicheRecette\\FicheRecette.csproj",
+      "projectPath": "C:\\Users\\diper\\source\\repos\\PetitVulcan\\MyProjects\\FicheRecetteASP_NET_Core_MCV\\FicheRecette\\FicheRecette.csproj",
       "packagesPath": "C:\\Users\\diper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diper\\source\\repos\\PetitVulcan\\MyProjects\\FicheRecette\\FicheRecette\\obj\\",
+      "outputPath": "C:\\Users\\diper\\source\\repos\\PetitVulcan\\MyProjects\\FicheRecetteASP_NET_Core_MCV\\FicheRecette\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

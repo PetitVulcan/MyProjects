@@ -48,6 +48,8 @@ VALUES
 
 
 
+
+
 //Table Nombre de Personnes
 
 CREATE TABLE [dbo].[nbpersonne] (
@@ -55,6 +57,29 @@ CREATE TABLE [dbo].[nbpersonne] (
     [nbpersonnes] INT NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
+
+
+//Script Nombre dePersonnes
+
+INSERT INTO nbpersonne (nbpersonnes)
+VALUES
+( 1 ),
+( 2 ),
+( 3 ),
+( 4 ),
+( 5 ),
+( 6 ),
+( 7 ),
+( 8 ),
+( 9 ),
+( 10 ),
+( 11 ),
+( 12 );
+
+
+
 
 
 //Table Images
@@ -65,6 +90,10 @@ CREATE TABLE [dbo].[images] (
     [urlimage]  VARCHAR (MAX) NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
+
+
 
 //Script Insertion Images
 
@@ -81,6 +110,7 @@ VALUES
 
 
 
+
 //Table Difficulté
 
 CREATE TABLE [dbo].[difficulte] (
@@ -88,6 +118,19 @@ CREATE TABLE [dbo].[difficulte] (
     [titre] VARCHAR (20) NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
+
+//Script Insertion Difficultés
+
+INSERT INTO difficulte(titre)
+VALUES
+( '*' ),
+( '**' ),
+( '***' ),
+( '****' ),
+( '*****' );
+
 
 
 
