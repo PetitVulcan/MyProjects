@@ -1,94 +1,105 @@
 ﻿@using FicheRecette.Model
 
-<div class="errors">
-    <div class="col-lg-12">
-        @if ((ViewBag.errors != null))
-        {
-            if ((ViewBag.errors as List<string>).Count > 0)
-            {
-                <div class="row">
-                    <div class="col-lg-12 alert alert-danger">
-                        @foreach (string e in (ViewBag.errors as List<string>))
-                        {
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    @e
-                                </div>
-                            </div>
-                        }
-                    </div>
-                </div>
-            }
-        }
+<div class="Container Recette">
+    <div class="Titre">
+        <h2>Ajouter une Recette</h2>
     </div>
-</div>
-<div class="row">
 
-    <div class="Ajouter">
-        <div class="row">
-            <div class="container">
-                <form method="post" asp-controller="Recette" asp-action="AjouterRecette" enctype="multipart/form-data">
-                    <div class="AjouterRecette">
-                        <h2 class="col-lg-12">Ajouter une Recette</h2>
+    <div class="errors">
+        <div class="col-lg-12">
+            @if ((ViewBag.errors != null))
+            {
+                if ((ViewBag.errors as List<string>).Count > 0)
+                {
+                    <div class="row RecetteLine">
+                        <div class="row">
+                            <div class="col-lg-12 alert alert-danger">
+                                @foreach (string e in (ViewBag.errors as List<string>))
+                                {
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            @e
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
                     </div>
-                    <label>Choisissez la catégorie : </label>
-                    <div class="row">
-                        <select name="Categorie" class="form-control">
-                            <option></option>
-                            @foreach (Category c in (ViewBag.Liste as List<Category>))
-                            {
-                                <option value="@c.Id">@c.Titre</option>
-                            }
-                        </select>
-                    </div>
-                    <label>Veuillez saisir un nom de recette : </label>
-                    <div class="row">
-                        <input type="text" class="form-control" value="@Model.NomRecette" name="nomRecette" />
-                    </div>
-                    <label>Choisissez le nombre de personne(s) : </label>
-                    <div class="row">
-                        <select name="NbPersonne" class="form-control">
-                            <option placeholder="Difficulté"></option>
-                            @foreach (NbPersonne n in (ViewBag.ListenbPersonne as List<NbPersonne>))
-                            {
-                                <option value="@n.Id">@n.ChoixNbPersonne</option>
-                            }
-                        </select>
-                    </div>
-                    <label>Choisissez la difficulté : </label>
-                    <div class="row">
-                        <select name="Difficulte" class="form-control">
-                            <option></option>
-                            @foreach (Difficulte d in (ViewBag.Listedifficulte as List<Difficulte>))
-                            {
-                                <option value="@d.Id">@d.Titre</option>
-                            }
-
-                        </select>
-                    </div>
-                    <label>Veuillez saisir la liste des ingrédients : </label>
-                    <div class="row">
-                        <textarea value="@Model.Ingredient" name="ingredient" class="form-control" placeholder="Liste d'ingrédients"> </textarea>
-
-                    </div>
-                    <label>Veuillez saisir les étapes de la réalisation : </label>
-                    <div class="row">
-                        <textarea value="@Model.Realisation" name="realisation" class="form-control" placeholder="Description de la réalisation"> </textarea>
-                    </div>
-                    <label>Ajouter une/des images(s) : </label>
-                    <div class="row">
-                        <input type="file" name="images" multiple placeholder="Les images de la recette" class="form-control" />
-                    </div>
-                    <div class="row">
-                        <button type="submit" class="btn btn-default">Ajouter</button>
-                    </div>
-                </form>
-            </div>
+                }
+            }
         </div>
     </div>
+    <div class="row RecetteLine">
+        <form method="post" asp-controller="Recette" asp-action="AjouterRecettePost" enctype="multipart/form-data">
+
+            <label>Veuillez saisir le nom de la recette : </label>
+            <div class="row1">
+                <input type="text" class="form-control" value="@Model.NomRecette" name="nomRecette" />
+            </div>
+            <label>Choisissez la catégorie : </label>
+            <div class="row1">
+                <select name="Categorie" class="form-control" >
+                    <option></option>
+                    @foreach (Category c in (ViewBag.Liste as List<Category>))
+                    {
+                        <option value="@c.Id">@c.Titre</option>
+                    }
+                </select>
+            </div>
+
+            <label>Choisissez le nombre de personne(s) : </label>
+            <div class="row1">
+                <select name="NbPersonne" class="form-control" value="@Model.NbPersonne">
+                    <option placeholder="NbPersonne"></option>
+                    @foreach (NbPersonne n in (ViewBag.ListenbPersonne as List<NbPersonne>))
+                    {
+                        <option value="@n.Id">@n.ChoixNbPersonne</option>
+                    }
+                </select>
+            </div>
+            <label>Choisissez la difficulté : </label>
+            <div class="row1">
+                <select name="Difficulte" class="form-control" value="@Model.Difficulte">
+                    <option placeholder="Difficulte"></option>
+                    @foreach (Difficulte d in (ViewBag.Listedifficulte as List<Difficulte>))
+                    {
+                        <option value="@d.Id">@d.Titre</option>
+                    }
+
+                </select>
+            </div>
+            <label>Veuillez saisir la liste des ingrédients : </label>
+            <div class="row1">
+                <textarea value="@Model.Ingredient" name="ingredient" class="form-control" placeholder="Liste d'ingrédients"> </textarea>
+
+            </div>
+            <label>Veuillez saisir les étapes de la réalisation : </label>
+            <div class="row1">
+                <textarea value="@Model.Realisation" name="realisation" class="form-control" placeholder="Description de la réalisation"> </textarea>
+            </div>
+            <label>Ajouter une/des images(s) : </label>
+            <div class="row1">
+                <input type="file" name="images" multiple placeholder="Les images de la recette" class="form-control" />
+            </div>
+            <div class="row1">
+                <button type="submit" class="btn btn-default">Ajouter</button>
+            </div>
+        </form>
+    </div>
 </div>
 
-   
+@*<div class="row">
+
+        <div class="Ajouter">
+            <div class="row">
+                <div class="container">
+
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
 @*<div>
         <h1>Ajouter une Recette</h1>
         <form asp-action="AjouterRecette" asp-controller="Recette" method="post">

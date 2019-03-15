@@ -65,7 +65,7 @@ using FicheRecette.Model;
             WriteLiteral("<div>\r\n    <h1>Liste Nb de Personne ");
             EndContext();
             BeginContext(99, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fa34fd322c0d48f7a8df19f78cbdfbc5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b6882e5077f496a8f648c54a0b875b8", async() => {
                 BeginContext(158, 27, true);
                 WriteLiteral("Ajouter un nb de personnes.");
                 EndContext();
@@ -125,7 +125,7 @@ using FicheRecette.Model;
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(411, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2fac5feff9a148699dc747886fe0dd88", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b481b3bbec64b69a09b42208575ae55", async() => {
                 BeginContext(493, 9, true);
                 WriteLiteral("Supprimer");
                 EndContext();
@@ -173,7 +173,7 @@ using FicheRecette.Model;
             WriteLiteral("<div>\r\n    <h1>Ajouter un Nombre de personnes</h1>\r\n    ");
             EndContext();
             BeginContext(639, 310, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "498b24fa9b504363b71c2694a2798143", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e7fe4ca5712c4d029ca6e6bc70ad0e48", async() => {
                 BeginContext(716, 226, true);
                 WriteLiteral("\r\n        <div>\r\n            <label>Nb de Personnes: </label>\r\n            <input type=\"number\" name=\"ChoixNbPersonne\" />\r\n        </div>\r\n        <div>\r\n            <button type=\"submit\">Ajouter</button>\r\n        </div>\r\n    ");
                 EndContext();

@@ -178,7 +178,7 @@ using FicheRecette.Model;
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(1511, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c0b625059db4de0bf34e3947b6d0d2d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "80e6baf777584f4782d6e6b493999ee4", async() => {
                 BeginContext(1588, 9, true);
                 WriteLiteral("Supprimer");
                 EndContext();
@@ -223,7 +223,7 @@ using FicheRecette.Model;
             WriteLiteral("</div>\r\n<div class=\"Titre\"><h2>Ajouter une categorie</h2></div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1702, 283, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8937df2e16d4e28a518a658df3b5c8c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9feebe21ff8442fdb70dd1b442114861", async() => {
                 BeginContext(1777, 201, true);
                 WriteLiteral("\r\n        <div>\r\n            <label>Titre : </label>\r\n            <input type=\"text\" name=\"Titre\" />\r\n        </div>\r\n        <div>\r\n            <button type=\"submit\">Ajouter</button>\r\n        </div>\r\n");
                 EndContext();

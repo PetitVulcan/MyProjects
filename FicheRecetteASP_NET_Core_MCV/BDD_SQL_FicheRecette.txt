@@ -61,7 +61,7 @@ CREATE TABLE [dbo].[nbpersonne] (
 
 
 
-//Script Nombre dePersonnes
+//Script Nombre de Personnes
 
 INSERT INTO nbpersonne (nbpersonnes)
 VALUES
@@ -106,12 +106,12 @@ VALUES
 ( 5 ,'images/recette/5-Gigot_de_7_heures.jpg'),
 ( 6 ,'images/recette/6-Spaghetti_alla_Carbonara.jpg'),
 ( 7 ,'images/recette/7-Tempura_de_gambas.jpg'),
-( 8 ,'images/recette/8-Poulet_Curry_Jaune.jpg');
+( 8 ,'images/recette/8-Poulet_Curry_Jaune.jpg'),
+( 19,'images/recette/19-SaintJacquesTruffe.jpg');
 
 
 
-
-//Table Difficulté
+//Table Difficulte
 
 CREATE TABLE [dbo].[difficulte] (
     [Id]    INT          IDENTITY (1, 1) NOT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE [dbo].[difficulte] (
 
 
 
-//Script Insertion Difficultés
+//Script Insertion Difficultes
 
 INSERT INTO difficulte(titre)
 VALUES
@@ -141,4 +141,26 @@ CREATE TABLE [dbo].[Category] (
     [Titre] VARCHAR (20) NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
+
+
+//Script Insertion Categories
+
+SET IDENTITY_INSERT [dbo].[Category] ON
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (1, N'Cuisine Française')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (6, N'Cuisine Italienne')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (3, N'Cuisine Asiatique')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (4, N'Cuisine Chinoise')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (5, N'Cuisine Japonaise')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (6, N'Cuisine Thaï')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (7, N'Cuisine Cambodgienne')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (6, N'Cuisine Grecque')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (7, N'Cuisine Mexicaine')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (9, N'Cuisine Marocaine')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (8, N'Cuisine Algérienne')
+INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (10, N'Cuisine des Iles')
+
+
+SET IDENTITY_INSERT [dbo].[Category] OFF
 

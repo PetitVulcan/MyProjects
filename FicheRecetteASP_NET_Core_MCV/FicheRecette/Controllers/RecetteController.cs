@@ -28,10 +28,12 @@ namespace FicheRecette.Controllers
         }
 
         [Route("[Controller]/{id?}")]
-        public IActionResult Detail(int? id)
+        public IActionResult Detail(int Id)
         {
             UserConnect(ViewBag);
-            return View();
+            ViewBag.categories = Category.GetCategories();
+            List<Recette> InfoRecette = Recette.GetRecette(Id);
+            return View("Detail",InfoRecette);
         }
 
         [Route("[Controller]/Ajouter")]
@@ -55,15 +57,19 @@ namespace FicheRecette.Controllers
 
         [Route("[Controller]/AjouterRecettePost")]
         [HttpPost]
-        public async Task<IActionResult>AjouterRecettes(DateTime date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, List<IFormFile> images)
+        public async Task<IActionResult> AjouterRecettePost(DateTime date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, int? Categorie, List<IFormFile> images)
         {
-            UserConnect(ViewBag);
-            Recette r = new Recette { NomUtilisateur = HttpContext.Session.GetString("nom"), NomRecette = NomRecette, NbPersonne = NbPersonne, Difficulte = Difficulte, Ingredient = Ingredient, Realisation = Realisation };
+            
+            Recette r = new Recette { NomRecette = NomRecette, NbPersonne = (int)NbPersonne, Difficulte = Difficulte, Ingredient = Ingredient, Realisation = Realisation , IdCategory=(int)Categorie};
             r.NomUtilisateur = HttpContext.Session.GetString("nom");
             List<string> errors = new List<string>();
             if (NomRecette == null)
             {
                 errors.Add("Merci d'indiquer un nom de recette.");
+            }
+            if (Categorie == null)
+            {
+                errors.Add("Merci d'indiquer une catégorie.");
             }
             if (NbPersonne == null)
             {
@@ -102,8 +108,8 @@ namespace FicheRecette.Controllers
                     }
 
                 }
-                r.Ajouter();
-                return RedirectToAction("ListeRecette");
+                r.AjouterRecette();
+                return RedirectToAction("AjouterRecette");
             }
         }
 

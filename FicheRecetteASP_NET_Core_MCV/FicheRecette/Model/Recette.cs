@@ -10,6 +10,7 @@ namespace FicheRecette.Model
         private int id;
         private int idUtilisateur;
         private int idCategory;
+        private int idrecette;
         private DateTime date;
         private string nomUtilisateur;
         private string nomRecette;
@@ -18,9 +19,9 @@ namespace FicheRecette.Model
         private string ingredient;
         private string realisation;
         private List<ImageRecette> images;
-
-
         private static List<Recette> ListeRecette = new List<Recette>();
+        private static List<Recette> InfoRecette = new List<Recette>();
+
         public string NomRecette { get => nomRecette; set => nomRecette = value; }
         public int? NbPersonne { get => nbPersonne; set => nbPersonne = value; }
         public string Difficulte { get => difficulte; set => difficulte = value; }
@@ -32,6 +33,7 @@ namespace FicheRecette.Model
         public List<ImageRecette> Images { get => images; set => images = value; }
         public int IdCategory { get => idCategory; set => idCategory = value; }
         public int IdUtilisateur { get => idUtilisateur; set => idUtilisateur = value; }
+        public int Idrecette { get => idrecette; set => idrecette = value; }
 
         public Recette()
 
@@ -39,8 +41,22 @@ namespace FicheRecette.Model
             Images = new List<ImageRecette>();
             Date = DateTime.Now;
         }
+        public Recette(int Id, DateTime Date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, int IdCategory, List<ImageRecette> Images)
 
-        public void Ajouter()
+        {
+            Images = new List<ImageRecette>();
+            Date = date;
+            NomUtilisateur = nomUtilisateur;
+            NomRecette = nomRecette;
+            NbPersonne = nbPersonne;
+            Difficulte = difficulte;
+            Ingredient = ingredient;
+            Realisation = realisation;
+            IdCategory = idCategory;
+        }
+       
+
+        public void AjouterRecette()
         {
             DataBase.Instance.AjouterRecette(this);
         }
@@ -50,15 +66,17 @@ namespace FicheRecette.Model
             DataBase.Instance.SupprimerRecette(this);
         }
 
+        public static List<Recette> GetRecette(int Id)
+
+        {
+            return DataBase.Instance.AfficherRecette(Id);         
+        }
+
         public static List<Recette> AvoirListeRecette(int? idCategory)
 
         {
             return DataBase.Instance.AvoirListeRecette(idCategory);
         }
-        //public static List<Recette> AvoirListeRecette(int? idUser)
-
-        //{
-        //    return DataBase.Instance.AvoirListeRecette(idUser);
-        //}
+        
     }
 }

@@ -8,13 +8,14 @@
 .barreBouton {
     Color: white;
 }
-header  {
-    height:130px
+header {
+    height: 130px;
+    font-family: Virginie
 }
 body .navbar-inverse {
-    padding-bottom:5px;
-    background-color:gray;
-    Color: white; 
+    padding-bottom: 5px;
+    background-color: #494949;
+    Color: white;
 }
 header nav a, .UserInfo {
     color: #FFF;
@@ -27,31 +28,55 @@ header nav a:hover {
     text-decoration:none
 }
 .container {
-   
-    color: gray;
-    font-family: Virginie
+    width: 100%;
+    margin: auto;
+}
+
+.Container Recette {
+    width: 1200px;
+    margin: auto;
 }
 .Titre {
-    padding-top:20px;
+    /*padding-top: 10px;*/
     color: #494949;
     text-align: center;
+    font-family: Virginie
+}
+.TitreBlanc {
+    
+    width:100%;
+    color: white;
+    font-family: Virginie
 }
 .wrapper {
-    background-color: lightblue;    
+    color: #494949;
     margin: auto;
     padding: 50px;
     box-shadow: 0 0 5px #999;
 }
+
 body {
     background-color: gray;
 }
-h1 {
-    margin-top:20px;
-    color: #494949;
+.row h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+    
 }
 h2 {
-    color: #494949;
-    margin: 50px;
+    font-family: Virginie;
+    margin: 15px;
+}
+h3 {
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: #494949;
+    box-shadow: 0 0 5px #999;
+    font-family: Virginie
 }
 
 .AjouterRecette {
@@ -62,8 +87,24 @@ label {
     font-size: 16px;
     margin: 15px;
 }
+imagedroite {
+    padding:0;
+    text-align: right;
+}
 centerimages {
     text-align: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+.imgFiche {
+    
+    text-align: right;
+    width: 100%;
+    height: 250px;
+    max-height:100%;
+    max-width:100%;
+    /*margin-bottom:30px;*/
+    
 }
 .imgRecette img {
     text-align: center;
@@ -76,11 +117,16 @@ centerimages {
     font-weight: normal;
     color: #494949;
     margin: 0;
+    font-family: Virginie
 }
 .row {
 
     margin-right: 25px;
     margin-left: 25px;
+}
+.row1 {
+    line-height:40px;
+    
 }
 .Recette {
     padding: 5px;
@@ -105,5 +151,6 @@ centerimages {
 }
 
 .filtre {
-    padding: 5px
+    padding: 5px 20px 5px 5px;
+    font-family:Virginie;
 }
