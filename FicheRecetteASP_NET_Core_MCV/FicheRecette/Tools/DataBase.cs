@@ -83,12 +83,12 @@ namespace FicheRecette.Tools
             SqlCommand command;
             if (IdCategory == null)
             {
-                command = new SqlCommand("SELECT r.IdCategory, r.Id, r.nomrecette, r.nbpersonne, r.difficulte, r.nomutilisateur, r.date, c.Titre   From Recette LEFT JOIN Category ON Recette.Idcategory = Category.Id", Connection.Instance);
+                command = new SqlCommand("SELECT * From Recette ", Connection.Instance);
                 Connection.Instance.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Recette r = new Recette { IdCategory = reader.GetInt32(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1), NomCategory= reader.GetString(1) };
+                    Recette r = new Recette { IdCategory = reader.GetInt32(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1), };
                     listeRecette.Add(r);
 
                 }
