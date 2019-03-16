@@ -120,7 +120,7 @@ namespace FicheRecette.Controllers
                 HttpContext.Session.SetString("logged", "true");
                 HttpContext.Session.SetString("nom", u.NomUtilisateur);
 
-                return RedirectToRoute(new { controller = "Recette", action = "AjouterRecette" });
+                return RedirectToRoute(new { controller = "Recette", action = "ListeRecette" });
             }
         }
         public void UserConnect(dynamic v)

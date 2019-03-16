@@ -19,6 +19,7 @@ namespace FicheRecette.Model
         private string ingredient;
         private string realisation;
         private List<ImageRecette> images;
+        private List<Ingredient> ingredients;
         private static List<Recette> ListeRecette = new List<Recette>();
         private static List<Recette> InfoRecette = new List<Recette>();
 
@@ -34,14 +35,16 @@ namespace FicheRecette.Model
         public int IdCategory { get => idCategory; set => idCategory = value; }
         public int IdUtilisateur { get => idUtilisateur; set => idUtilisateur = value; }
         public int Idrecette { get => idrecette; set => idrecette = value; }
+        public List<Ingredient> Ingredients { get => ingredients; set => ingredients = value; }
 
         public Recette()
 
         {
+            Ingredients = new List<Ingredient>();
             Images = new List<ImageRecette>();
             Date = DateTime.Now;
         }
-        public Recette(int Id, DateTime Date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, int IdCategory, List<ImageRecette> Images)
+        public Recette(int Id, DateTime Date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, List<Ingredient> Ingredients, string Realisation, int IdCategory, List<ImageRecette> Images)
 
         {
             Images = new List<ImageRecette>();
@@ -50,7 +53,7 @@ namespace FicheRecette.Model
             NomRecette = nomRecette;
             NbPersonne = nbPersonne;
             Difficulte = difficulte;
-            Ingredient = ingredient;
+            Ingredients = new List<Ingredient>(); ;
             Realisation = realisation;
             IdCategory = idCategory;
         }
@@ -72,10 +75,10 @@ namespace FicheRecette.Model
             return DataBase.Instance.AfficherRecette(Id);         
         }
 
-        public static List<Recette> AvoirListeRecette(int? idCategory)
+        public static List<Recette> AvoirListeRecette(int? IdCategory)
 
         {
-            return DataBase.Instance.AvoirListeRecette(idCategory);
+            return DataBase.Instance.AvoirListeRecette(IdCategory);
         }
         
     }

@@ -77,40 +77,56 @@ namespace FicheRecette.Tools
             return;
         }
 
-        public List<Recette> AvoirListeRecette(int? idCategory)
+        public List<Recette> AvoirListeRecette(int? IdCategory)
         {
             List<Recette> listeRecette = new List<Recette>();
             SqlCommand command;
-            if (idCategory == null)
+            if (IdCategory == null)
             {
                 command = new SqlCommand("SELECT * From Recette", Connection.Instance);
+                Connection.Instance.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Recette r = new Recette { IdCategory = reader.GetInt32(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1) };
+                    listeRecette.Add(r);
+
+                }
+                reader.Close();
+                command.Dispose();
             }
             else
             {
-                command = new SqlCommand("SELECT IdCategory, Id, NomRecette, NbPersonne, Difficulte, NomUtilisateur, Date From recette WHERE IdCategory = @idcategory", Connection.Instance);
-                command.Parameters.Add(new SqlParameter("@idcategory", idCategory));
-            }
-            Connection.Instance.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                Recette r = new Recette { IdCategory = reader.GetInt32(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1) };
-                listeRecette.Add(r);
+                command = new SqlCommand("SELECT Id, nomrecette, nbpersonne, difficulte, nomutilisateur, date From recette WHERE IdCategory = @IdCategory", Connection.Instance);
+                command.Parameters.Add(new SqlParameter("@IdCategory", SqlDbType.Int) { Value = IdCategory });
+                Connection.Instance.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                   
+                    Recette r = new Recette { Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1) };
+                    r.IdCategory = (int)IdCategory;
+                    listeRecette.Add(r);
 
+                }
+                reader.Close();
+                command.Dispose();
+                
             }
-            reader.Close();
-            command.Dispose();
+            
             for (int i = 0; i < listeRecette.Count; i++)
             {
+
                 command = new SqlCommand("SELECT Id, Urlimage from images WHERE Idrecette = @idrecette", Connection.Instance);
                 command.Parameters.Add(new SqlParameter("@idrecette", listeRecette[i].Id));
-                reader = command.ExecuteReader();
+                SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
                     listeRecette[i].Images.Add(new ImageRecette { Id = reader.GetInt32(0), Url = reader.GetString(1) });
                 }
                 reader.Close();
                 command.Dispose();
+                
             }
             Connection.Instance.Close();
             return listeRecette;
@@ -147,7 +163,41 @@ namespace FicheRecette.Tools
                 Connection.Instance.Close();
                 return InfoRecette;
         }
-            public List<NbPersonne> LoadNbPersonne()
+        //public List<Ingredient> LoadIngredients()
+        //{
+        //    List<Ingredient> liste = new List<Ingredient>();
+        //    SqlCommand command = new SqlCommand("SELECT * FROM ingredient", Connection.Instance);
+        //    Connection.Instance.Open();
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        Ingredient i = new Ingredient { Id = reader.GetInt32(0),IdRecette = reader.GetInt32(1), Nom = reader.GetString(2) };
+        //        liste.Add(i);
+        //    }
+        //    reader.Close();
+        //    command.Dispose();
+        //    Connection.Instance.Close();
+        //    return liste;
+        //}
+        //public void AddIngredient(Ingredient i)
+        //{
+        //    SqlCommand command = new SqlCommand("INSERT INTO ingredient(nom) OUTPUT INSERTED.ID VALUES(@Nom)", Connection.Instance);
+        //    command.Parameters.Add(new SqlParameter("@Nom", i.Nom));
+        //    Connection.Instance.Open();
+        //    i.Id = (int)command.ExecuteScalar();
+        //    command.Dispose();
+        //    Connection.Instance.Close();
+        //}
+
+        //public void DeleteIngredient(Ingredient i)
+        //{
+        //    SqlCommand command = new SqlCommand("DELETE FROM ingredient WHERE Idrecette = @IdRecette", Connection.Instance);
+        //    command.Parameters.Add(new SqlParameter("@IdRecette", i.Id));
+        //    Connection.Instance.Open();
+        //    command.ExecuteNonQuery();
+        //    Connection.Instance.Close();
+        //}
+        public List<NbPersonne> LoadNbPersonne()
         {
             List<NbPersonne> liste = new List<NbPersonne>();
             SqlCommand command = new SqlCommand("SELECT * FROM nbpersonne", Connection.Instance);
@@ -325,7 +375,7 @@ namespace FicheRecette.Tools
             bool retour = false;
             if (u.NomUtilisateur != null)
             {
-                SqlCommand command = new SqlCommand("SELECT * FROM Utilisateur where NomUtilisateur=@NomUtilisateur", Connection.Instance);
+                SqlCommand command = new SqlCommand("SELECT * FROM utilisateur where NomUtilisateur=@NomUtilisateur", Connection.Instance);
                 command.Parameters.Add(new SqlParameter("@NomUtilisateur", u.NomUtilisateur));
                 Connection.Instance.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -357,7 +407,7 @@ namespace FicheRecette.Tools
             {
                 MD5 md5Hash = MD5.Create();
                 string MdpHash = GetMd5Hash(md5Hash, Mdp);
-                SqlCommand command = new SqlCommand("SELECT Id, Nom, Prenom FROM Utilisateur where NomUtilisateur=@NomUtilisateur and Mdp = @Mdp", Connection.Instance);
+                SqlCommand command = new SqlCommand("SELECT Id, nom, prenom FROM utilisateur where NomUtilisateur=@NomUtilisateur and Mdp = @Mdp", Connection.Instance);
                 command.Parameters.Add(new SqlParameter("@NomUtilisateur", NomUtilisateur));
                 command.Parameters.Add(new SqlParameter("@Mdp", MdpHash));
                 Connection.Instance.Open();

@@ -27,6 +27,15 @@ header nav a:hover {
     color: royalblue ;
     text-decoration:none
 }
+footer {
+    text-align: center;
+    background-color: #494949;
+    color: white;
+    line-height: 15px;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+}
 .container {
     width: 100%;
     margin: auto;
@@ -154,3 +163,4 @@ centerimages {
     padding: 5px 20px 5px 5px;
     font-family:Virginie;
 }
+
