@@ -178,7 +178,7 @@ using FicheRecette.Model;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(1712, 92, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3b36a45ad1fe4cc89f2b8069f783741c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9e42239d3c84ee88cb9e0e714d35c10", async() => {
                 BeginContext(1791, 9, true);
                 WriteLiteral("Supprimer");
                 EndContext();
@@ -223,7 +223,7 @@ using FicheRecette.Model;
             WriteLiteral("    </div>\r\n\r\n    <div class=\"Titre\"><h2>Ajouter une Difficulté</h2></div>\r\n    ");
             EndContext();
             BeginContext(1917, 404, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b2c73f34ead4803af50036793e0b3d2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d7c0799760284923b5a78ebf36dd1a4b", async() => {
                 BeginContext(1994, 320, true);
                 WriteLiteral(@"       
 

@@ -78,66 +78,67 @@
         </div>
         <div class="row RecetteLine">
             @*<div class="col-lg-12">
-                @if ((ViewBag.errors != null))
-                {
-                    if ((ViewBag.errors as List<string>).Count > 0)
+                    @if ((ViewBag.errors != null))
                     {
-                        <div class="row">
-                            <div class="col-lg-12 alert alert-danger">
-                                @foreach (string e in (ViewBag.errors as List<string>))
-                                {
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            @e
+                        if ((ViewBag.errors as List<string>).Count > 0)
+                        {
+                            <div class="row">
+                                <div class="col-lg-12 alert alert-danger">
+                                    @foreach (string e in (ViewBag.errors as List<string>))
+                                    {
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                @e
+                                            </div>
                                         </div>
-                                    </div>
-                                }
+                                    }
+                                </div>
                             </div>
-                        </div>
+                        }
                     }
-                }
-            </div>
+                </div>
 
-            <div class="col-lg-12">
+                <div class="col-lg-12">
 
-                @if (ViewBag.Ingredients != null)
-                {
-                    if (ViewBag.Ingredients)
+                    @if (ViewBag.Ingredients != null)
                     {
-                        <div class="row">
-                            <div class="col-lg-12 alert alert-success">
-                                @ViewBag.Message
+                        if (ViewBag.Ingredients)
+                        {
+                            <div class="row">
+                                <div class="col-lg-12 alert alert-success">
+                                    @ViewBag.Message
+                                </div>
                             </div>
-                        </div>
+                        }
                     }
-                }
-            </div>
-            <label>Veuillez saisir la liste des ingrédients : </label>
+                </div>
+                <label>Veuillez saisir la liste des ingrédients : </label>
 
-            @if (Model.Count == 0)
-            {
-                <div>
-                    Aucun ingrédient.
-                </div>
-            }
-            @foreach (Ingredient i in Model)
-            {
-                <div>
-                    @i.Nom
-                    <a asp-action="DeleteIngredient" asp-controller="Recette" asp-route-id="@i.Id">Supprimer</a>
-                </div>
-            }
-            <div class="Titre"><h2>Ajouter les ingrédients :</h2></div>
-            <form asp-action="registerIngredient" asp-controller="recette" method="post">
-                <div class="row RecetteLine">
-                    <label>Nom de l'ingrédient : </label>
-                    <div class="row1">
-                        <input type="text" name="Titre" />
-                        <button type="submit">Ajouter</button>
+                @if (Model.Count == 0)
+                {
+                    <div>
+                        Aucun ingrédient.
                     </div>
-                </div>
-            </form>*@
-                <div class="row1">
+                }
+                @foreach (Ingredient i in Model)
+                {
+                    <div>
+                        @i.Nom
+                        <a asp-action="DeleteIngredient" asp-controller="Recette" asp-route-id="@i.Id">Supprimer</a>
+                    </div>
+                }
+                <div class="Titre"><h2>Ajouter les ingrédients :</h2></div>
+                <form asp-action="registerIngredient" asp-controller="recette" method="post">
+                    <div class="row RecetteLine">
+                        <label>Nom de l'ingrédient : </label>
+                        <div class="row1">
+                            <input type="text" name="Titre" />
+                            <button type="submit">Ajouter</button>
+                        </div>
+                    </div>
+                </form>*@
+            <label>Veuillez saisir la liste des ingrédients : </label>
+            <div class="row1">
                 <textarea value="@Model.Ingredient" name="ingredient" class="form-control" placeholder="Liste d'ingrédients"> </textarea>
 
             </div>

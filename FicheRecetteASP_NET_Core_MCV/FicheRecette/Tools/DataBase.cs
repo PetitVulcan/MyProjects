@@ -60,7 +60,7 @@ namespace FicheRecette.Tools
             command.Parameters.Add(new SqlParameter("@nomUtilisateur", SqlDbType.VarChar) { Value = r.NomUtilisateur });
             command.ExecuteNonQuery();
             command.Dispose();
-            
+
             Connection.Instance.Close();
             return;
         }
@@ -83,12 +83,12 @@ namespace FicheRecette.Tools
             SqlCommand command;
             if (IdCategory == null)
             {
-                command = new SqlCommand("SELECT * From Recette", Connection.Instance);
+                command = new SqlCommand("SELECT r.IdCategory, r.Id, r.nomrecette, r.nbpersonne, r.difficulte, r.nomutilisateur, r.date, c.Titre   From Recette LEFT JOIN Category ON Recette.Idcategory = Category.Id", Connection.Instance);
                 Connection.Instance.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Recette r = new Recette { IdCategory = reader.GetInt32(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1) };
+                    Recette r = new Recette { IdCategory = reader.GetInt32(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1), NomCategory= reader.GetString(1) };
                     listeRecette.Add(r);
 
                 }
@@ -103,7 +103,7 @@ namespace FicheRecette.Tools
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                   
+
                     Recette r = new Recette { Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1) };
                     r.IdCategory = (int)IdCategory;
                     listeRecette.Add(r);
@@ -111,9 +111,9 @@ namespace FicheRecette.Tools
                 }
                 reader.Close();
                 command.Dispose();
-                
+
             }
-            
+
             for (int i = 0; i < listeRecette.Count; i++)
             {
 
@@ -126,7 +126,7 @@ namespace FicheRecette.Tools
                 }
                 reader.Close();
                 command.Dispose();
-                
+
             }
             Connection.Instance.Close();
             return listeRecette;
@@ -134,34 +134,46 @@ namespace FicheRecette.Tools
 
         public List<Recette> AfficherRecette(int Id)
         {
-            
-                List<Recette> InfoRecette = new List<Recette>();
-                SqlCommand command = new SqlCommand("SELECT * FROM recette WHERE Id=@Id", Connection.Instance);
-                command.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int) { Value = Id });
-                Connection.Instance.Open();
-                SqlDataReader reader = command.ExecuteReader();
-           
+
+            List<Recette> InfoRecette = new List<Recette>();
+            SqlCommand command = new SqlCommand("SELECT * FROM recette WHERE Id=@Id", Connection.Instance);
+            command.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int) { Value = Id });
+            Connection.Instance.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Recette r = new Recette { IdCategory = reader.GetInt32(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1), Ingredient = reader.GetString(6), Realisation = reader.GetString(7) };
+                InfoRecette.Add(r);
+            }
+            reader.Close();
+            command.Dispose();
+            for (int i = 0; i < InfoRecette.Count; i++)
+            {
+                command = new SqlCommand("SELECT Id, Urlimage from images WHERE Idrecette = @Id", Connection.Instance);
+                command.Parameters.Add(new SqlParameter("@Id", InfoRecette[i].Id));
+                reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                Recette r = new Recette { IdCategory = reader.GetInt32(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1), Ingredient = reader.GetString(6) , Realisation = reader.GetString(7) };
-                InfoRecette.Add(r);
+                    InfoRecette[i].Images.Add(new ImageRecette { Id = reader.GetInt32(0), Url = reader.GetString(1) });
                 }
                 reader.Close();
                 command.Dispose();
-                for (int i = 0; i < InfoRecette.Count; i++)
-                {
-                    command = new SqlCommand("SELECT Id, Urlimage from images WHERE Idrecette = @Id", Connection.Instance);
-                    command.Parameters.Add(new SqlParameter("@Id", InfoRecette[i].Id));
-                    reader = command.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        InfoRecette[i].Images.Add(new ImageRecette { Id = reader.GetInt32(0), Url = reader.GetString(1) });
-                    }
-                    reader.Close();
-                    command.Dispose();
-                }
-                Connection.Instance.Close();
-                return InfoRecette;
+
+                //command = new SqlCommand("SELECT titre from Category WHERE Id = @IdCategory", Connection.Instance);
+                //command.Parameters.Add(new SqlParameter("@IdCategory", InfoRecette[i].Id));
+                //reader = command.ExecuteReader();
+                //while (reader.Read())
+                //{
+                //    InfoRecette[i].NomCategory = new Recette { NomCategory = reader.GetString(1) });
+                    
+                //}
+                //reader.Close();
+                //command.Dispose();
+            }
+
+            Connection.Instance.Close();
+            return InfoRecette;
         }
         //public List<Ingredient> LoadIngredients()
         //{

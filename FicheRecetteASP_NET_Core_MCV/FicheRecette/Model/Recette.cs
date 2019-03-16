@@ -12,6 +12,7 @@ namespace FicheRecette.Model
         private int idCategory;
         private int idrecette;
         private DateTime date;
+        private string nomCategory;
         private string nomUtilisateur;
         private string nomRecette;
         private int? nbPersonne;
@@ -36,15 +37,16 @@ namespace FicheRecette.Model
         public int IdUtilisateur { get => idUtilisateur; set => idUtilisateur = value; }
         public int Idrecette { get => idrecette; set => idrecette = value; }
         public List<Ingredient> Ingredients { get => ingredients; set => ingredients = value; }
+        public string NomCategory { get => nomCategory; set => nomCategory = value; }
 
         public Recette()
 
         {
-            Ingredients = new List<Ingredient>();
+            Ingredients=new List<Ingredient>();
             Images = new List<ImageRecette>();
             Date = DateTime.Now;
         }
-        public Recette(int Id, DateTime Date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, List<Ingredient> Ingredients, string Realisation, int IdCategory, List<ImageRecette> Images)
+        public Recette(int Id, DateTime Date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, int IdCategory, string NomCategory, List<ImageRecette> Images)
 
         {
             Images = new List<ImageRecette>();
@@ -53,7 +55,7 @@ namespace FicheRecette.Model
             NomRecette = nomRecette;
             NbPersonne = nbPersonne;
             Difficulte = difficulte;
-            Ingredients = new List<Ingredient>(); ;
+            Ingredient = ingredient;
             Realisation = realisation;
             IdCategory = idCategory;
         }
