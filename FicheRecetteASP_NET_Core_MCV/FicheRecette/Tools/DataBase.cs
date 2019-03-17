@@ -166,76 +166,76 @@ namespace FicheRecette.Tools
             return InfoRecette;
         }
         
-        public List<NbPersonne> LoadNbPersonne()
-        {
-            List<NbPersonne> liste = new List<NbPersonne>();
-            SqlCommand command = new SqlCommand("SELECT * FROM nbpersonne", Connection.Instance);
-            Connection.Instance.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                NbPersonne n = new NbPersonne { Id = reader.GetInt32(0), ChoixNbPersonne = reader.GetInt32(1) };
-                liste.Add(n);
-            }
-            reader.Close();
-            command.Dispose();
-            Connection.Instance.Close();
-            return liste;
-        }
-        public void AddNbPersonne(NbPersonne n)
-        {
-            SqlCommand command = new SqlCommand("INSERT INTO nbpersonne(nbpersonnes) OUTPUT INSERTED.ID VALUES(@ChoixNbPersonne)", Connection.Instance);
-            command.Parameters.Add(new SqlParameter("@ChoixNbPersonne", n.ChoixNbPersonne));
-            Connection.Instance.Open();
-            n.Id = (int)command.ExecuteScalar();
-            command.Dispose();
-            Connection.Instance.Close();
-        }
+        //public List<NbPersonne> LoadNbPersonne()
+        //{
+        //    List<NbPersonne> liste = new List<NbPersonne>();
+        //    SqlCommand command = new SqlCommand("SELECT * FROM nbpersonne", Connection.Instance);
+        //    Connection.Instance.Open();
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        NbPersonne n = new NbPersonne { Id = reader.GetInt32(0), ChoixNbPersonne = reader.GetInt32(1) };
+        //        liste.Add(n);
+        //    }
+        //    reader.Close();
+        //    command.Dispose();
+        //    Connection.Instance.Close();
+        //    return liste;
+        //}
+        //public void AddNbPersonne(NbPersonne n)
+        //{
+        //    SqlCommand command = new SqlCommand("INSERT INTO nbpersonne(nbpersonnes) OUTPUT INSERTED.ID VALUES(@ChoixNbPersonne)", Connection.Instance);
+        //    command.Parameters.Add(new SqlParameter("@ChoixNbPersonne", n.ChoixNbPersonne));
+        //    Connection.Instance.Open();
+        //    n.Id = (int)command.ExecuteScalar();
+        //    command.Dispose();
+        //    Connection.Instance.Close();
+        //}
 
-        public void DeleteNbPersonne(NbPersonne n)
-        {
-            SqlCommand command = new SqlCommand("DELETE FROM nbpersonne WHERE Id = @id", Connection.Instance);
-            command.Parameters.Add(new SqlParameter("@id", n.Id));
-            Connection.Instance.Open();
-            command.ExecuteNonQuery();
-            Connection.Instance.Close();
-        }
+        //public void DeleteNbPersonne(NbPersonne n)
+        //{
+        //    SqlCommand command = new SqlCommand("DELETE FROM nbpersonne WHERE Id = @id", Connection.Instance);
+        //    command.Parameters.Add(new SqlParameter("@id", n.Id));
+        //    Connection.Instance.Open();
+        //    command.ExecuteNonQuery();
+        //    Connection.Instance.Close();
+        //}
 
 
-        public List<Difficulte> LoadDifficulte()
-        {
-            List<Difficulte> liste = new List<Difficulte>();
-            SqlCommand command = new SqlCommand("SELECT * FROM difficulte", Connection.Instance);
-            Connection.Instance.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                Difficulte d = new Difficulte { Id = reader.GetInt32(0), Titre = reader.GetString(1) };
-                liste.Add(d);
-            }
-            reader.Close();
-            command.Dispose();
-            Connection.Instance.Close();
-            return liste;
-        }
-        public void AddDifficulte(Difficulte d)
-        {
-            SqlCommand command = new SqlCommand("INSERT INTO difficulte(titre) OUTPUT INSERTED.ID VALUES(@Titre)", Connection.Instance);
-            command.Parameters.Add(new SqlParameter("@Titre", d.Titre));
-            Connection.Instance.Open();
-            d.Id = (int)command.ExecuteScalar();
-            command.Dispose();
-            Connection.Instance.Close();
-        }
+        //public List<Difficulte> LoadDifficulte()
+        //{
+        //    List<Difficulte> liste = new List<Difficulte>();
+        //    SqlCommand command = new SqlCommand("SELECT * FROM difficulte", Connection.Instance);
+        //    Connection.Instance.Open();
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        Difficulte d = new Difficulte { Id = reader.GetInt32(0), Titre = reader.GetString(1) };
+        //        liste.Add(d);
+        //    }
+        //    reader.Close();
+        //    command.Dispose();
+        //    Connection.Instance.Close();
+        //    return liste;
+        //}
+        //public void AddDifficulte(Difficulte d)
+        //{
+        //    SqlCommand command = new SqlCommand("INSERT INTO difficulte(titre) OUTPUT INSERTED.ID VALUES(@Titre)", Connection.Instance);
+        //    command.Parameters.Add(new SqlParameter("@Titre", d.Titre));
+        //    Connection.Instance.Open();
+        //    d.Id = (int)command.ExecuteScalar();
+        //    command.Dispose();
+        //    Connection.Instance.Close();
+        //}
 
-        public void DeleteDifficulte(Difficulte d)
-        {
-            SqlCommand command = new SqlCommand("DELETE FROM difficulte WHERE Id = @id", Connection.Instance);
-            command.Parameters.Add(new SqlParameter("@id", d.Id));
-            Connection.Instance.Open();
-            command.ExecuteNonQuery();
-            Connection.Instance.Close();
-        }
+        //public void DeleteDifficulte(Difficulte d)
+        //{
+        //    SqlCommand command = new SqlCommand("DELETE FROM difficulte WHERE Id = @id", Connection.Instance);
+        //    command.Parameters.Add(new SqlParameter("@id", d.Id));
+        //    Connection.Instance.Open();
+        //    command.ExecuteNonQuery();
+        //    Connection.Instance.Close();
+        //}
 
         public List<Category> LoadCategories()
         {

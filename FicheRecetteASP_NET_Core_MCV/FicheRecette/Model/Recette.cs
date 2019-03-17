@@ -19,8 +19,7 @@ namespace FicheRecette.Model
         private string difficulte;
         private string ingredient;
         private string realisation;
-        private List<ImageRecette> images;
-        private List<Ingredient> ingredients;
+        private List<ImageRecette> images;        
         private static List<Recette> ListeRecette = new List<Recette>();
         private static List<Recette> InfoRecette = new List<Recette>();
 
@@ -36,13 +35,11 @@ namespace FicheRecette.Model
         public int IdCategory { get => idCategory; set => idCategory = value; }
         public int IdUtilisateur { get => idUtilisateur; set => idUtilisateur = value; }
         public int Idrecette { get => idrecette; set => idrecette = value; }
-        public List<Ingredient> Ingredients { get => ingredients; set => ingredients = value; }
         public string NomCategory { get => nomCategory; set => nomCategory = value; }
 
         public Recette()
 
         {
-            Ingredients=new List<Ingredient>();
             Images = new List<ImageRecette>();
             Date = DateTime.Now;
         }

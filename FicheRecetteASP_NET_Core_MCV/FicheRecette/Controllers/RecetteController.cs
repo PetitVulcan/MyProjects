@@ -45,8 +45,8 @@ namespace FicheRecette.Controllers
             {
                 Recette r = new Recette();
                 ViewBag.Liste = Category.GetCategories();
-                ViewBag.ListeNbPersonne = NbPersonne.GetNbPersonne();
-                ViewBag.ListeDifficulte = Difficulte.GetDifficulte();
+                //ViewBag.ListeNbPersonne = NbPersonne.GetNbPersonne();
+                //ViewBag.ListeDifficulte = Difficulte.GetDifficulte();
                 return View("AjouterRecette", r);
             }
             else
@@ -120,91 +120,91 @@ namespace FicheRecette.Controllers
             r.Supprimer();
             return RedirectToAction("ListeRecette");
         }
-       [Route("Difficulte")]
-        public IActionResult ListeDifficulte()
-        {
-            UserConnect(ViewBag);
-            List<Difficulte> liste = Difficulte.GetDifficulte();
-            return View("ListeDifficulte", liste);
-        }
-        [Route("Difficulte/Add")]
-        public IActionResult AjouterDifficulte()
-        {
-            UserConnect(ViewBag);
-            return View("AddDifficulte");
-        }
+       //[Route("Difficulte")]
+       // public IActionResult ListeDifficulte()
+       // {
+       //     UserConnect(ViewBag);
+       //     List<Difficulte> liste = Difficulte.GetDifficulte();
+       //     return View("ListeDifficulte", liste);
+       // }
+       // [Route("Difficulte/Add")]
+       // public IActionResult AjouterDifficulte()
+       // {
+       //     UserConnect(ViewBag);
+       //     return View("AddDifficulte");
+       // }
 
-        [Route("Difficulte/Register")]
-        [HttpPost]
-        public IActionResult RegisterDifficulte(string titre)
-        {
-            List<string> errors = new List<string>();
-            Difficulte d = new Difficulte { Titre = titre };
-            if (titre == null)
-            {
-                errors.Add("Merci de saisir une Difficulté");
-            }
-            ViewBag.errors = errors;
-            if (errors.Count > 0)
-            {
-                UserConnect(ViewBag);
-                List<Difficulte> liste = Difficulte.GetDifficulte();
-                return View("Listedifficulte", liste);
+       // [Route("Difficulte/Register")]
+       // [HttpPost]
+       // public IActionResult RegisterDifficulte(string titre)
+       // {
+       //     List<string> errors = new List<string>();
+       //     Difficulte d = new Difficulte { Titre = titre };
+       //     if (titre == null)
+       //     {
+       //         errors.Add("Merci de saisir une Difficulté");
+       //     }
+       //     ViewBag.errors = errors;
+       //     if (errors.Count > 0)
+       //     {
+       //         UserConnect(ViewBag);
+       //         List<Difficulte> liste = Difficulte.GetDifficulte();
+       //         return View("Listedifficulte", liste);
 
-            }
-            else
-            {
-                d.Add();
-                ViewBag.Difficulte = true;
-                ViewBag.Message = "Difficulté Ajoutée";
-                UserConnect(ViewBag);
-                List<Difficulte> liste = Difficulte.GetDifficulte();
-                return View("Listedifficulte", liste);
-            }           
-        }
+       //     }
+       //     else
+       //     {
+       //         d.Add();
+       //         ViewBag.Difficulte = true;
+       //         ViewBag.Message = "Difficulté Ajoutée";
+       //         UserConnect(ViewBag);
+       //         List<Difficulte> liste = Difficulte.GetDifficulte();
+       //         return View("Listedifficulte", liste);
+       //     }           
+       // }
 
-        public IActionResult DeleteDifficulte(int id)
-        {
-            Difficulte d = new Difficulte { Id = id };
-            d.Delete();
-            ViewBag.Difficulte = true;
-            ViewBag.Message = "Difficulté Supprimée";
-            UserConnect(ViewBag);
-            List<Difficulte> liste = Difficulte.GetDifficulte();
-            return View("Listedifficulte", liste);
-        }
+       // public IActionResult DeleteDifficulte(int id)
+       // {
+       //     Difficulte d = new Difficulte { Id = id };
+       //     d.Delete();
+       //     ViewBag.Difficulte = true;
+       //     ViewBag.Message = "Difficulté Supprimée";
+       //     UserConnect(ViewBag);
+       //     List<Difficulte> liste = Difficulte.GetDifficulte();
+       //     return View("Listedifficulte", liste);
+       // }
 
-        //NbPersonne
+       // //NbPersonne
 
-        [Route("NbPersonne")]
-        public IActionResult ListeNbPersonne()
-        {
-            UserConnect(ViewBag);
-            List<NbPersonne> liste = NbPersonne.GetNbPersonne();
-            return View("ListeNbPersonne", liste);
-        }
-        [Route("NbPersonne/Add")]
-        public IActionResult AjouterNbPersonne()
-        {
-            UserConnect(ViewBag);
-            return View("listenbpersonne");
-        }
+       // [Route("NbPersonne")]
+       // public IActionResult ListeNbPersonne()
+       // {
+       //     UserConnect(ViewBag);
+       //     List<NbPersonne> liste = NbPersonne.GetNbPersonne();
+       //     return View("ListeNbPersonne", liste);
+       // }
+       // [Route("NbPersonne/Add")]
+       // public IActionResult AjouterNbPersonne()
+       // {
+       //     UserConnect(ViewBag);
+       //     return View("listenbpersonne");
+       // }
 
-        [Route("NbPersonne/Register")]
-        [HttpPost]
-        public IActionResult RegisterNbPersonne(int ChoixNbPersonne)
-        {
-            NbPersonne n = new NbPersonne { ChoixNbPersonne = ChoixNbPersonne };
-            n.Add();
-            return RedirectToAction("listenbpersonne");
-        }
+       // [Route("NbPersonne/Register")]
+       // [HttpPost]
+       // public IActionResult RegisterNbPersonne(int ChoixNbPersonne)
+       // {
+       //     NbPersonne n = new NbPersonne { ChoixNbPersonne = ChoixNbPersonne };
+       //     n.Add();
+       //     return RedirectToAction("listenbpersonne");
+       // }
 
-        public IActionResult DeleteNbPersonne(int id)
-        {
-            NbPersonne n = new NbPersonne { Id = id };
-            n.Delete();
-            return RedirectToAction("listenbpersonne");
-        }
+       // public IActionResult DeleteNbPersonne(int id)
+       // {
+       //     NbPersonne n = new NbPersonne { Id = id };
+       //     n.Delete();
+       //     return RedirectToAction("listenbpersonne");
+       // }
         [Route("Categorie")]
         public IActionResult ListeCategories()
         {
