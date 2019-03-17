@@ -57,17 +57,17 @@ namespace FicheRecette.Controllers
 
         [Route("[Controller]/AjouterRecettePost")]
         [HttpPost]
-        public async Task<IActionResult> AjouterRecettePost(DateTime date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, int? Categorie, List<IFormFile> images)
+        public async Task<IActionResult> AjouterRecettePost(DateTime date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, string NomCategory, List<IFormFile> images)
         {
             
-            Recette r = new Recette { NomRecette = NomRecette, NbPersonne = (int)NbPersonne, Difficulte = Difficulte, Ingredient = Ingredient, Realisation = Realisation , IdCategory=(int)Categorie};
+            Recette r = new Recette { NomRecette = NomRecette, NbPersonne = (int?)NbPersonne, Difficulte = Difficulte, Ingredient = Ingredient, Realisation = Realisation , NomCategory = NomCategory};
             r.NomUtilisateur = HttpContext.Session.GetString("nom");
             List<string> errors = new List<string>();
             if (NomRecette == null)
             {
                 errors.Add("Merci d'indiquer un nom de recette.");
             }
-            if (Categorie == null)
+            if (NomCategory == null)
             {
                 errors.Add("Merci d'indiquer une catégorie.");
             }
@@ -90,7 +90,7 @@ namespace FicheRecette.Controllers
             if (errors.Count > 0)
             {
 
-                ViewBag.error = true;
+                ViewBag.errors = true;
                 ViewBag.errors = errors;
                 return View("AjouterRecette", r);
             }

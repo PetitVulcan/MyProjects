@@ -140,7 +140,7 @@ using FicheRecette.Model;
             WriteLiteral("                    ");
             EndContext();
             BeginContext(1339, 2221, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1f032c6dd26d40949f86aec27c52475c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c3389fa86484aab94bbc573deda4c93", async() => {
                 BeginContext(1420, 169, true);
                 WriteLiteral("\r\n                        <div class=\"row\">\r\n                            <div class=\"col-lg-12\">\r\n                                <input type=\"text\" class=\"form-control\"");
                 EndContext();
@@ -252,7 +252,7 @@ WriteAttributeValue("", 2830, Model.Mdp, 2830, 10, false);
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n    <div class=\"col-lg-6\">\r\n        <div class=\"Login\">\r\n            <div class=\"row\">\r\n                <h2 class=\"col-lg-12\">Se connecter</h2>\r\n            </div>\r\n            ");
             EndContext();
             BeginContext(3767, 831, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd697fbb3a7d4f5abb21c4a408735151", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10d7453ab29d46b89e651ab8fff1afbe", async() => {
                 BeginContext(3829, 762, true);
                 WriteLiteral(@"
                 <div class=""row"">

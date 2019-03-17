@@ -12,11 +12,11 @@
                 if ((ViewBag.errors as List<string>).Count > 0)
                 {
                     <div class="row RecetteLine">
-                        <div class="row">
+                        <div class="row1">
                             <div class="col-lg-12 alert alert-danger">
                                 @foreach (string e in (ViewBag.errors as List<string>))
                                 {
-                                    <div class="row">
+                                    <div class="row1">
                                         <div class="col-lg-12">
                                             @e
                                         </div>
@@ -31,112 +31,65 @@
     </div>
     <form method="post" asp-controller="Recette" asp-action="AjouterRecettePost" enctype="multipart/form-data">
         <div class="row RecetteLine">
+            <div class="col-lg-8">
 
-
-            <label>Veuillez saisir le nom de la recette : </label>
-            <div class="row1">
-                <input type="text" class="form-control" value="@Model.NomRecette" name="nomRecette" />
+                <label>Veuillez saisir le nom de la recette : </label>
+                <div class="row1">
+                    <input type="text" class="form-control" value="@Model.NomRecette" name="nomRecette" />
+                </div>
             </div>
-        </div>
-        <div class="row RecetteLine">
-
-            <label>Choisissez la catégorie : </label>
-            <div class="row1">
-                <select name="Categorie" class="form-control">
-                    <option></option>
-                    @foreach (Category c in (ViewBag.Liste as List<Category>))
-                    {
-                        <option value="@c.Id">@c.Titre</option>
-                    }
-                </select>
-            </div>
-        </div>
-        <div class="row RecetteLine">
-            <label>Choisissez le nombre de personne(s) : </label>
-            <div class="row1">
-                <select name="NbPersonne" class="form-control" value="@Model.NbPersonne">
-                    <option placeholder="NbPersonne"></option>
-                    @foreach (NbPersonne n in (ViewBag.ListenbPersonne as List<NbPersonne>))
-                    {
-                        <option value="@n.Id">@n.ChoixNbPersonne</option>
-                    }
-                </select>
-            </div>
-        </div>
-        <div class="row RecetteLine">
-            <label>Choisissez la difficulté : </label>
-            <div class="row1">
-                <select name="Difficulte" class="form-control" value="@Model.Difficulte">
-                    <option placeholder="Difficulte"></option>
-                    @foreach (Difficulte d in (ViewBag.Listedifficulte as List<Difficulte>))
-                    {
-                        <option value="@d.Id">@d.Titre</option>
-                    }
-
-                </select>
-            </div>
-        </div>
-        <div class="row RecetteLine">
-            @*<div class="col-lg-12">
-                    @if ((ViewBag.errors != null))
-                    {
-                        if ((ViewBag.errors as List<string>).Count > 0)
+            <div class="col-lg-4">
+                <label>Choisissez la catégorie : </label>
+                <div class="row1">
+                    <select name="NomCategory" class="form-control">
+                        <option></option>
+                        @foreach (Category c in (ViewBag.Liste as List<Category>))
                         {
-                            <div class="row">
-                                <div class="col-lg-12 alert alert-danger">
-                                    @foreach (string e in (ViewBag.errors as List<string>))
-                                    {
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                @e
-                                            </div>
-                                        </div>
-                                    }
-                                </div>
-                            </div>
+                            <option value="@c.Titre">@c.Titre</option>
                         }
-                    }
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <label>Nombre de personne(s) : </label>
+                <select class="selectpicker" name="NbPersonne" size="1" value="@Model.NbPersonne">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="col-lg-4">
+
+                <label>Choisissez la difficulté : </label>
+                <select class="selectpicker" name="Difficulte" size="1" value="@Model.Difficulte">
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                    <option value="***">***</option>
+                    <option value="****">****</option>
+                    <option value="*****">*****</option>
+
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <label>Ajouter une image : </label>
+                <div class="row1">
+                    <input type="file" name="images" multiple placeholder="Les images de la recette" class="form-control" />
                 </div>
 
-                <div class="col-lg-12">
+            </div>
+        </div>
 
-                    @if (ViewBag.Ingredients != null)
-                    {
-                        if (ViewBag.Ingredients)
-                        {
-                            <div class="row">
-                                <div class="col-lg-12 alert alert-success">
-                                    @ViewBag.Message
-                                </div>
-                            </div>
-                        }
-                    }
-                </div>
-                <label>Veuillez saisir la liste des ingrédients : </label>
+        <div class="row RecetteLine">
 
-                @if (Model.Count == 0)
-                {
-                    <div>
-                        Aucun ingrédient.
-                    </div>
-                }
-                @foreach (Ingredient i in Model)
-                {
-                    <div>
-                        @i.Nom
-                        <a asp-action="DeleteIngredient" asp-controller="Recette" asp-route-id="@i.Id">Supprimer</a>
-                    </div>
-                }
-                <div class="Titre"><h2>Ajouter les ingrédients :</h2></div>
-                <form asp-action="registerIngredient" asp-controller="recette" method="post">
-                    <div class="row RecetteLine">
-                        <label>Nom de l'ingrédient : </label>
-                        <div class="row1">
-                            <input type="text" name="Titre" />
-                            <button type="submit">Ajouter</button>
-                        </div>
-                    </div>
-                </form>*@
             <label>Veuillez saisir la liste des ingrédients : </label>
             <div class="row1">
                 <textarea value="@Model.Ingredient" name="ingredient" class="form-control" placeholder="Liste d'ingrédients"> </textarea>
@@ -149,12 +102,7 @@
                 <textarea value="@Model.Realisation" name="realisation" class="form-control" placeholder="Description de la réalisation"> </textarea>
             </div>
         </div>
-        <div class="row RecetteLine">
-            <label>Ajouter une/des images(s) : </label>
-            <div class="row1">
-                <input type="file" name="images" multiple placeholder="Les images de la recette" class="form-control" />
-            </div>
-        </div>
+
         <div class="row RecetteLine">
             <div class="btn">
                 <button type="submit">Ajouter</button>

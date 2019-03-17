@@ -46,7 +46,7 @@ namespace FicheRecette.Model
             Images = new List<ImageRecette>();
             Date = DateTime.Now;
         }
-        public Recette(int Id, DateTime Date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, int IdCategory, string NomCategory, List<ImageRecette> Images)
+        public Recette(int Id, DateTime Date, string NomUtilisateur, string NomRecette, int? NbPersonne, string Difficulte, string Ingredient, string Realisation, string NomCategory, List<ImageRecette> Images)
 
         {
             Images = new List<ImageRecette>();
@@ -57,7 +57,7 @@ namespace FicheRecette.Model
             Difficulte = difficulte;
             Ingredient = ingredient;
             Realisation = realisation;
-            IdCategory = idCategory;
+            NomCategory = nomCategory;
         }
        
 

@@ -161,7 +161,6 @@ C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.pdb
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.Views.dll
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\bin\Debug\netcoreapp2.1\FicheRecette.Views.pdb
-C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csprojAssemblyReference.cache
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CoreCompileInputs.cache
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorAssemblyInfo.cache
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.RazorAssemblyInfo.cs
@@ -195,3 +194,4 @@ C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.dll
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.pdb
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CopyComplete
+C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csprojAssemblyReference.cache

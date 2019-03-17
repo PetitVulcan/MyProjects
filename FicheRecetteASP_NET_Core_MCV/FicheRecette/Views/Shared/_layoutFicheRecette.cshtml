@@ -29,14 +29,11 @@
                         <div class="col-lg-2 barreBouton">
                             <a asp-area="" asp-controller="Recette" asp-action="AjouterRecette">Ajouter une Recettes</a>
                         </div>
-                        <div class="col-lg-1 barreBouton">
+                        <div class="col-lg-offset-1 col-lg-1 barreBouton">
                             <a asp-area="" asp-controller="Utilisateur" asp-action="ListeUtilisateurs">Utilisateurs</a>
                         </div>
                         <div class="col-lg-1 barreBouton">
                             <a asp-area="" asp-controller="Recette" asp-action="AjouterCategorie">Catégories</a>
-                        </div>
-                        <div class="col-lg-1 barreBouton">
-                            <a asp-area="" asp-controller="Recette" asp-action="ListeDifficulte">Difficulté</a>
                         </div>
                         <div class="col-lg-offset-2 col-lg-3">
                             <span class="UserInfo">@ViewBag.nom - </span><a asp-controller="Utilisateur" asp-action="LogOut"> Se Déconnecter</a>
