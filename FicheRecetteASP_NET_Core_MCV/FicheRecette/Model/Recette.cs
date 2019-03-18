@@ -63,7 +63,7 @@ namespace FicheRecette.Model
             DataBase.Instance.AjouterRecette(this);
         }
 
-        public void Supprimer()
+        public void SupprimerRecette()
         {
             DataBase.Instance.SupprimerRecette(this);
         }

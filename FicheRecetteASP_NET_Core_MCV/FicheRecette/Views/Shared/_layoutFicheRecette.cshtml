@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>La Casa del Tonino</title>
     <link rel="stylesheet" href="~/css/FicheRecette.css" />
-    
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 
 </head>
 <body>
@@ -20,6 +20,15 @@
                 @*<a asp-area="" asp-controller="Recette" asp-action="ListeRecette" class=""><img src="~/images/logo.png" /></a>*@
                 <div class="row barreBouton">
                     <div class="col-lg-offset-2"></div>
+                    @if (ViewBag.Admin == true)
+                    {
+                        <div class="col-lg-offset-1 col-lg-1 barreBouton">
+                            <a asp-area="" asp-controller="Utilisateur" asp-action="ListeUtilisateurs">Utilisateurs</a>
+                        </div>
+                        <div class="col-lg-1 barreBouton">
+                            <a asp-area="" asp-controller="Recette" asp-action="AjouterCategorie">Catégories</a>
+                        </div>
+                    }
 
                     @if (ViewBag.Logged == true)
                     {
@@ -29,12 +38,7 @@
                         <div class="col-lg-2 barreBouton">
                             <a asp-area="" asp-controller="Recette" asp-action="AjouterRecette">Ajouter une Recettes</a>
                         </div>
-                        <div class="col-lg-offset-1 col-lg-1 barreBouton">
-                            <a asp-area="" asp-controller="Utilisateur" asp-action="ListeUtilisateurs">Utilisateurs</a>
-                        </div>
-                        <div class="col-lg-1 barreBouton">
-                            <a asp-area="" asp-controller="Recette" asp-action="AjouterCategorie">Catégories</a>
-                        </div>
+
                         <div class="col-lg-offset-2 col-lg-3">
                             <span class="UserInfo">@ViewBag.nom - </span><a asp-controller="Utilisateur" asp-action="LogOut"> Se Déconnecter</a>
                         </div>

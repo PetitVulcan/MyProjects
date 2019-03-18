@@ -25,10 +25,10 @@ namespace FicheRecette.Controllers
        
         [HttpPost]
         [Route("Utilisateur/Add")]
-        public IActionResult AjouterUtilisateur(string Nom, string Prenom, string NomUtilisateur, string EMail, int NbRecettecree,string Mdp,string cMdp)
+        public IActionResult AjouterUtilisateur(string Nom, string Prenom, string NomUtilisateur, string EMail, int NbRecettecree,string Mdp,string cMdp,string Admin)
         {
             List<string> errors = new List<string>();
-            Utilisateur u = new Utilisateur { Nom = Nom, Prenom=Prenom, NomUtilisateur=NomUtilisateur,EMail=EMail, Mdp=Mdp};
+            Utilisateur u = new Utilisateur { Nom = Nom, Prenom = Prenom, NomUtilisateur = NomUtilisateur,EMail = EMail, Mdp = Mdp, Admin = Admin};
             if (Nom == null)
             {
                 errors.Add("Merci de saisir un Nom");
@@ -116,19 +116,23 @@ namespace FicheRecette.Controllers
             }
             else
             {
-                
+                if (!u.UserAdmin() == true)
+                {
+                    HttpContext.Session.SetString("Admin", "true");
+                }
                 HttpContext.Session.SetString("logged", "true");
                 HttpContext.Session.SetString("nom", u.NomUtilisateur);
-
                 return RedirectToRoute(new { controller = "Recette", action = "ListeRecette" });
             }
         }
         public void UserConnect(dynamic v)
         {
             bool? logged = Convert.ToBoolean(HttpContext.Session.GetString("logged"));
+            bool? admin = Convert.ToBoolean(HttpContext.Session.GetString("Admin"));
             if (logged == true)
             {
                 v.Logged = logged;
+                v.Admin = admin;
                 v.Nom = HttpContext.Session.GetString("nom");
 
             }

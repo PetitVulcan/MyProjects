@@ -57,6 +57,7 @@ footer {
     color: white;
     font-family: Virginie
 }
+
 .wrapper {
     color: #494949;
     margin: auto;
@@ -134,8 +135,8 @@ centerimages {
     margin-left: 25px;
 }
 .row1 {
-    line-height:40px;
-    
+    line-height: 40px;
+    text-decoration: none;    
 }
 .Recette {
     padding: 5px;
@@ -144,6 +145,7 @@ centerimages {
     background-color: #EFEFEF;
 }
 .RecetteLine {
+    text-decoration: none;
     padding: 10px;
     border: 1px solid gray;
     margin: 10px;

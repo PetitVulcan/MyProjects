@@ -45,8 +45,6 @@ namespace FicheRecette.Controllers
             {
                 Recette r = new Recette();
                 ViewBag.Liste = Category.GetCategories();
-                //ViewBag.ListeNbPersonne = NbPersonne.GetNbPersonne();
-                //ViewBag.ListeDifficulte = Difficulte.GetDifficulte();
                 return View("AjouterRecette", r);
             }
             else
@@ -70,15 +68,7 @@ namespace FicheRecette.Controllers
             if (NomCategory == null)
             {
                 errors.Add("Merci d'indiquer une catégorie.");
-            }
-            if (NbPersonne == null)
-            {
-                errors.Add("Merci d'indiquer le nombre de personne(s) pour cette recette.");
-            }
-            if (Difficulte == null)
-            {
-                errors.Add("Merci d'indiquer le niveau de difficulté de cette recette.");
-            }
+            }            
             if (Ingredient == null)
             {
                 errors.Add("Merci d'indiquer la liste d'ingrédients.");
@@ -90,7 +80,7 @@ namespace FicheRecette.Controllers
             if (errors.Count > 0)
             {
 
-                ViewBag.errors = true;
+                ViewBag.error = true;
                 ViewBag.errors = errors;
                 return View("AjouterRecette", r);
             }
@@ -101,10 +91,10 @@ namespace FicheRecette.Controllers
                     if (f.FileName.Contains(".png") || f.FileName.Contains(".jpg"))
                     {
 
-                        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/recette", r.Id.ToString() + "-" + f.FileName);
+                        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/recette", r.NomCategory.ToString() + "-" + f.FileName);
                         var stream = new FileStream(path, FileMode.Create);
                         await f.CopyToAsync(stream);
-                        r.Images.Add(new ImageRecette { Url = "images/recette/" + r.Id.ToString() + "-" + f.FileName });
+                        r.Images.Add(new ImageRecette { Url = "images/recette/" + r.NomCategory.ToString() + "-" + f.FileName });
                     }
 
                 }
@@ -117,94 +107,9 @@ namespace FicheRecette.Controllers
         public IActionResult SupprimerRecette(int id)
         {
             Recette r = new Recette { Id = id };
-            r.Supprimer();
+            r.SupprimerRecette();
             return RedirectToAction("ListeRecette");
-        }
-       //[Route("Difficulte")]
-       // public IActionResult ListeDifficulte()
-       // {
-       //     UserConnect(ViewBag);
-       //     List<Difficulte> liste = Difficulte.GetDifficulte();
-       //     return View("ListeDifficulte", liste);
-       // }
-       // [Route("Difficulte/Add")]
-       // public IActionResult AjouterDifficulte()
-       // {
-       //     UserConnect(ViewBag);
-       //     return View("AddDifficulte");
-       // }
-
-       // [Route("Difficulte/Register")]
-       // [HttpPost]
-       // public IActionResult RegisterDifficulte(string titre)
-       // {
-       //     List<string> errors = new List<string>();
-       //     Difficulte d = new Difficulte { Titre = titre };
-       //     if (titre == null)
-       //     {
-       //         errors.Add("Merci de saisir une Difficulté");
-       //     }
-       //     ViewBag.errors = errors;
-       //     if (errors.Count > 0)
-       //     {
-       //         UserConnect(ViewBag);
-       //         List<Difficulte> liste = Difficulte.GetDifficulte();
-       //         return View("Listedifficulte", liste);
-
-       //     }
-       //     else
-       //     {
-       //         d.Add();
-       //         ViewBag.Difficulte = true;
-       //         ViewBag.Message = "Difficulté Ajoutée";
-       //         UserConnect(ViewBag);
-       //         List<Difficulte> liste = Difficulte.GetDifficulte();
-       //         return View("Listedifficulte", liste);
-       //     }           
-       // }
-
-       // public IActionResult DeleteDifficulte(int id)
-       // {
-       //     Difficulte d = new Difficulte { Id = id };
-       //     d.Delete();
-       //     ViewBag.Difficulte = true;
-       //     ViewBag.Message = "Difficulté Supprimée";
-       //     UserConnect(ViewBag);
-       //     List<Difficulte> liste = Difficulte.GetDifficulte();
-       //     return View("Listedifficulte", liste);
-       // }
-
-       // //NbPersonne
-
-       // [Route("NbPersonne")]
-       // public IActionResult ListeNbPersonne()
-       // {
-       //     UserConnect(ViewBag);
-       //     List<NbPersonne> liste = NbPersonne.GetNbPersonne();
-       //     return View("ListeNbPersonne", liste);
-       // }
-       // [Route("NbPersonne/Add")]
-       // public IActionResult AjouterNbPersonne()
-       // {
-       //     UserConnect(ViewBag);
-       //     return View("listenbpersonne");
-       // }
-
-       // [Route("NbPersonne/Register")]
-       // [HttpPost]
-       // public IActionResult RegisterNbPersonne(int ChoixNbPersonne)
-       // {
-       //     NbPersonne n = new NbPersonne { ChoixNbPersonne = ChoixNbPersonne };
-       //     n.Add();
-       //     return RedirectToAction("listenbpersonne");
-       // }
-
-       // public IActionResult DeleteNbPersonne(int id)
-       // {
-       //     NbPersonne n = new NbPersonne { Id = id };
-       //     n.Delete();
-       //     return RedirectToAction("listenbpersonne");
-       // }
+        }      
         [Route("Categorie")]
         public IActionResult ListeCategories()
         {
@@ -264,9 +169,11 @@ namespace FicheRecette.Controllers
         public void UserConnect(dynamic v)
         {
             bool? logged = Convert.ToBoolean(HttpContext.Session.GetString("logged"));
+            bool? Admin = Convert.ToBoolean(HttpContext.Session.GetString("admin"));
             if (logged == true)
             {
                 v.Logged = logged;
+                v.Admin = Admin;
                 v.Nom = HttpContext.Session.GetString("nom");
 
             }

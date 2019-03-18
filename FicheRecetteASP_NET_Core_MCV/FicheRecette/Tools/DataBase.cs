@@ -68,10 +68,14 @@ namespace FicheRecette.Tools
 
         public void SupprimerRecette(Recette r)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM recette WHERE id=@id", Connection.Instance);
-            command.Parameters.Add(new SqlParameter("@id", r.Id));
+            SqlCommand command = new SqlCommand("DELETE  FROM recette WHERE Id=@Id", Connection.Instance);
+            command.Parameters.Add(new SqlParameter("@Id", r.Id));
             Connection.Instance.Open();
             command.ExecuteScalar();
+            command.Dispose();
+            SqlCommand command2 = new SqlCommand("DELETE  FROM images WHERE Idrecette=@Id", Connection.Instance);
+            //command.Parameters.Add(new SqlParameter("@Id", r.Id));
+            command.ExecuteNonQuery();
             command.Dispose();
             Connection.Instance.Close();
             return;
@@ -166,77 +170,6 @@ namespace FicheRecette.Tools
             return InfoRecette;
         }
         
-        //public List<NbPersonne> LoadNbPersonne()
-        //{
-        //    List<NbPersonne> liste = new List<NbPersonne>();
-        //    SqlCommand command = new SqlCommand("SELECT * FROM nbpersonne", Connection.Instance);
-        //    Connection.Instance.Open();
-        //    SqlDataReader reader = command.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        NbPersonne n = new NbPersonne { Id = reader.GetInt32(0), ChoixNbPersonne = reader.GetInt32(1) };
-        //        liste.Add(n);
-        //    }
-        //    reader.Close();
-        //    command.Dispose();
-        //    Connection.Instance.Close();
-        //    return liste;
-        //}
-        //public void AddNbPersonne(NbPersonne n)
-        //{
-        //    SqlCommand command = new SqlCommand("INSERT INTO nbpersonne(nbpersonnes) OUTPUT INSERTED.ID VALUES(@ChoixNbPersonne)", Connection.Instance);
-        //    command.Parameters.Add(new SqlParameter("@ChoixNbPersonne", n.ChoixNbPersonne));
-        //    Connection.Instance.Open();
-        //    n.Id = (int)command.ExecuteScalar();
-        //    command.Dispose();
-        //    Connection.Instance.Close();
-        //}
-
-        //public void DeleteNbPersonne(NbPersonne n)
-        //{
-        //    SqlCommand command = new SqlCommand("DELETE FROM nbpersonne WHERE Id = @id", Connection.Instance);
-        //    command.Parameters.Add(new SqlParameter("@id", n.Id));
-        //    Connection.Instance.Open();
-        //    command.ExecuteNonQuery();
-        //    Connection.Instance.Close();
-        //}
-
-
-        //public List<Difficulte> LoadDifficulte()
-        //{
-        //    List<Difficulte> liste = new List<Difficulte>();
-        //    SqlCommand command = new SqlCommand("SELECT * FROM difficulte", Connection.Instance);
-        //    Connection.Instance.Open();
-        //    SqlDataReader reader = command.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        Difficulte d = new Difficulte { Id = reader.GetInt32(0), Titre = reader.GetString(1) };
-        //        liste.Add(d);
-        //    }
-        //    reader.Close();
-        //    command.Dispose();
-        //    Connection.Instance.Close();
-        //    return liste;
-        //}
-        //public void AddDifficulte(Difficulte d)
-        //{
-        //    SqlCommand command = new SqlCommand("INSERT INTO difficulte(titre) OUTPUT INSERTED.ID VALUES(@Titre)", Connection.Instance);
-        //    command.Parameters.Add(new SqlParameter("@Titre", d.Titre));
-        //    Connection.Instance.Open();
-        //    d.Id = (int)command.ExecuteScalar();
-        //    command.Dispose();
-        //    Connection.Instance.Close();
-        //}
-
-        //public void DeleteDifficulte(Difficulte d)
-        //{
-        //    SqlCommand command = new SqlCommand("DELETE FROM difficulte WHERE Id = @id", Connection.Instance);
-        //    command.Parameters.Add(new SqlParameter("@id", d.Id));
-        //    Connection.Instance.Open();
-        //    command.ExecuteNonQuery();
-        //    Connection.Instance.Close();
-        //}
-
         public List<Category> LoadCategories()
         {
             List<Category> liste = new List<Category>();
@@ -295,7 +228,11 @@ namespace FicheRecette.Tools
 
         public void AjouterUtilisateur(Utilisateur u)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO utilisateur (date,nom,prenom,nomutilisateur,email,nbrecettecree,mdp) OUTPUT INSERTED.id values(@date,@nom,@prenom,@NomUtilisateur,@eMail,@NbRecettecree,@Mdp)", Connection.Instance);
+            if (u.Admin == null)
+            {
+                u.Admin = "false";
+            }
+            SqlCommand command = new SqlCommand("INSERT INTO utilisateur (date,nom,prenom,nomutilisateur,email,nbrecettecree,mdp,admin) OUTPUT INSERTED.id values(@date,@nom,@prenom,@NomUtilisateur,@eMail,@NbRecettecree,@Mdp,@Admin)", Connection.Instance);
             MD5 md5Hash = MD5.Create();
             string MdpHash = GetMd5Hash(md5Hash, u.Mdp);
             command.Parameters.Add(new SqlParameter("@date", SqlDbType.Date) { Value = DateTime.Now });
@@ -305,6 +242,7 @@ namespace FicheRecette.Tools
             command.Parameters.Add(new SqlParameter("@eMail", SqlDbType.VarChar) { Value = u.EMail });
             command.Parameters.Add(new SqlParameter("@NbRecettecree", SqlDbType.Int) { Value = 0 });
             command.Parameters.Add(new SqlParameter("@Mdp", SqlDbType.VarChar) { Value = MdpHash });
+            command.Parameters.Add(new SqlParameter("@Admin", SqlDbType.VarChar) { Value = u.Admin });
             Connection.Instance.Open();
             command.ExecuteNonQuery();
             command.Dispose();
@@ -331,13 +269,48 @@ namespace FicheRecette.Tools
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                Utilisateur u = new Utilisateur { Id = reader.GetInt32(0), Nom = reader.GetString(2), Prenom = reader.GetString(3), NomUtilisateur = reader.GetString(4), EMail = reader.GetString(5), NbRecettecree = reader.GetInt32(6) };
+                Utilisateur u = new Utilisateur { Id = reader.GetInt32(0), Nom = reader.GetString(2), Prenom = reader.GetString(3), NomUtilisateur = reader.GetString(4), EMail = reader.GetString(5), NbRecettecree = reader.GetInt32(6) , Admin = reader.GetString(8)};
                 listeUtilisateur.Add(u);
             }
             reader.Close();
             command.Dispose();
             Connection.Instance.Close();
             return listeUtilisateur;
+        }
+       public bool UserAdmin(Utilisateur u)
+        {
+            bool retour = false;
+            if (u.NomUtilisateur != null)
+            {
+                SqlCommand command = new SqlCommand("SELECT admin FROM utilisateur where nomutilisateur=@NomUtilisateur", Connection.Instance);
+                command.Parameters.Add(new SqlParameter("@NomUtilisateur", u.NomUtilisateur));
+                Connection.Instance.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    u.Admin = reader.GetString(0);                    
+                }
+                else
+                {
+                    retour = false;
+                }
+                reader.Close();
+                command.Dispose();
+                Connection.Instance.Close();
+                if(u.Admin == "true")
+                {
+                    retour = true;
+                }
+                else
+                {
+                    retour = false;
+                }
+            }
+            else
+            {
+                retour = false;
+            }
+            return retour;
         }
         public bool LookUser(Utilisateur u)
         {
@@ -359,13 +332,13 @@ namespace FicheRecette.Tools
                 }
                 reader.Close();
                 command.Dispose();
-                Connection.Instance.Close();
+                
             }
             else
             {
                 retour = false;
             }
-
+            Connection.Instance.Close();
             return retour;
         }
 
@@ -400,7 +373,6 @@ namespace FicheRecette.Tools
             {
                 retour = false;
             }
-
             return retour;
         }
     }

@@ -178,7 +178,7 @@ using FicheRecette.Model;
             WriteLiteral("\r\n                ");
             EndContext();
             BeginContext(1668, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "700da55fe3b24b72aafaafa0393de4bb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "212d3e2edd884797a5861e7455e82a52", async() => {
                 BeginContext(1745, 12, true);
                 WriteLiteral(" - Supprimer");
                 EndContext();
@@ -223,7 +223,7 @@ using FicheRecette.Model;
             WriteLiteral("\r\n    </div>\r\n\r\n    <div class=\"Titre\"><h2>Ajouter une Catégorie</h2></div>\r\n    ");
             EndContext();
             BeginContext(1875, 354, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d56d623b56184550a0533d66c0e517ef", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b7ac0a7db1bb463b84f1ede3c0e41dac", async() => {
                 BeginContext(1950, 272, true);
                 WriteLiteral(@"
         <div class=""row RecetteLine"">

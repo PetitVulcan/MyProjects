@@ -27,6 +27,14 @@
                         <div class="row1">
                             <div class="col-lg-12">Ajoutée par : @r.NomUtilisateur</div>
                         </div>
+                        <div class="row1">
+                            <div class="text-center">
+                                @if (@ViewBag.nom == r.NomUtilisateur)
+                                {
+                                    <button type="submit"><a asp-action="SupprimerRecette" asp-controller="Recette" asp-route-id="@r.Id">Supprimer</a></button>
+                                }
+                            </div>                           
+                        </div>
                     </div>
                     <div class="col-lg-4 imagedroite">
                         <div class="imgFiche">
