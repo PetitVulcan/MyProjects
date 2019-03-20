@@ -87,36 +87,6 @@ Donec et quam et neque egestas fermentum. Morbi scelerisque felis lorem, vel rho
 
 
 
-//Table Nombre de Personnes
-
-CREATE TABLE [dbo].[nbpersonne] (
-    [Id]          INT IDENTITY (1, 1) NOT NULL,
-    [nbpersonnes] INT NOT NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
-
-
-
-
-//Script Nombre de Personnes
-
-INSERT INTO nbpersonne (nbpersonnes)
-VALUES
-( 1 ),
-( 2 ),
-( 3 ),
-( 4 ),
-( 5 ),
-( 6 ),
-( 7 ),
-( 8 ),
-( 9 ),
-( 10 ),
-( 11 ),
-( 12 );
-
-
-
 
 
 //Table Images
@@ -148,25 +118,10 @@ VALUES
 
 
 
-//Table Difficulte
-
-CREATE TABLE [dbo].[difficulte] (
-    [Id]    INT          IDENTITY (1, 1) NOT NULL,
-    [titre] VARCHAR (20) NOT NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
-);
 
 
 
-//Script Insertion Difficultes
 
-INSERT INTO difficulte(titre)
-VALUES
-( '*' ),
-( '**' ),
-( '***' ),
-( '****' ),
-( '*****' );
 
 
 
@@ -197,7 +152,5 @@ INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (7, N'Cuisine Mexicaine')
 INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (9, N'Cuisine Marocaine')
 INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (8, N'Cuisine Algérienne')
 INSERT INTO [dbo].[Category] ([Id], [Titre]) VALUES (10, N'Cuisine des Iles')
-
-
 SET IDENTITY_INSERT [dbo].[Category] OFF
 

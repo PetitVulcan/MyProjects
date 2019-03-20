@@ -29,7 +29,7 @@ namespace FicheRecette.Controllers
             return View("ListeRecette", listeRecette);
         }
 
-        //[Route("[Controller]/{id?}")]
+        
         public IActionResult Detail(int Id)
         {
             UserConnect(ViewBag);
@@ -77,7 +77,7 @@ namespace FicheRecette.Controllers
             }
             if (Realisation == null)
             {
-                errors.Add("Merci d'indiquer une catégorie d'annonce.");
+                errors.Add("Merci d'indiquer la réalisation de la recette.");
             }
             if (errors.Count > 0)
             {
@@ -101,7 +101,7 @@ namespace FicheRecette.Controllers
 
                 }
                 r.AjouterRecette();
-                return RedirectToAction("AjouterRecette");
+                return RedirectToAction("Detail",r);
             }
         }
 
