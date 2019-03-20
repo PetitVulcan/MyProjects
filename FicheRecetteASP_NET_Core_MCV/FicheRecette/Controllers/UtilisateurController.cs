@@ -118,7 +118,7 @@ namespace FicheRecette.Controllers
             {
                 if (!u.UserAdmin() == true)
                 {
-                    HttpContext.Session.SetString("Admin", "true");
+                    HttpContext.Session.SetString("admin", "true");
                 }
                 HttpContext.Session.SetString("logged", "true");
                 HttpContext.Session.SetString("nom", u.NomUtilisateur);
@@ -127,8 +127,9 @@ namespace FicheRecette.Controllers
         }
         public void UserConnect(dynamic v)
         {
+            bool? admin = Convert.ToBoolean(HttpContext.Session.GetString("admin"));
             bool? logged = Convert.ToBoolean(HttpContext.Session.GetString("logged"));
-            bool? admin = Convert.ToBoolean(HttpContext.Session.GetString("Admin"));
+            
             if (logged == true)
             {
                 v.Logged = logged;

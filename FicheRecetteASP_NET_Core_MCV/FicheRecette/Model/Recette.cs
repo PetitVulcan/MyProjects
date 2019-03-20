@@ -67,6 +67,10 @@ namespace FicheRecette.Model
         {
             DataBase.Instance.SupprimerRecette(this);
         }
+        public static List<Recette> AvoirListeRecetteTri(string NomCategory)
+        {
+            return DataBase.Instance.AvoirListeRecetteTri(NomCategory);
+        }
 
         public static List<Recette> GetRecette(int Id)
 

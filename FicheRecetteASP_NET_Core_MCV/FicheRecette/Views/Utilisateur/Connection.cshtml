@@ -1,45 +1,55 @@
-﻿@using FicheRecette.Model; 
+﻿@using FicheRecette.Model;
+@{
 
-<div class="row">
+}
+
+<div class="Container Recette">
+    <div class="Titre">
+        <h2>S'enregistrer / Se connecter</h2>
+    </div>
+
     <div class="col-lg-12">
         @if ((ViewBag.errors != null))
         {
             if ((ViewBag.errors as List<string>).Count > 0)
             {
-                <div class="row">
-                    <div class="col-lg-12 alert alert-danger">
-                        @foreach (string e in (ViewBag.errors as List<string>))
-                        {
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    @e
+                <div class="row RecetteLines">
+                    <div class="row1">
+                        <div class="col-lg-12 alert alert-danger">
+                            @foreach (string e in (ViewBag.errors as List<string>))
+                            {
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        @e
+                                    </div>
                                 </div>
-                            </div>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             }
         }
     </div>
-</div>
-<div class="row">
-    <div class="col-lg-6">
-        <div class="Inscription">
-            <div class="row">
-                <h2 class="col-lg-12">S'inscrire</h2>
-            </div>
 
-            @if (ViewBag.Inscription != null)
-            {
-                if (ViewBag.Inscription)
-                {
+    <div class="row RecetteLine">
+        <div class="row1">
+            <div class="col-lg-6">
+                <div class="Inscription">
                     <div class="row">
-                        <div class="col-lg-12 alert alert-success">
-                            @ViewBag.Message
-                        </div>
+                        <h2 class="col-lg-12">S'inscrire</h2>
                     </div>
-                }
-            }
+
+                    @if (ViewBag.Inscription != null)
+                    {
+                        if (ViewBag.Inscription)
+                        {
+                            <div class="row RecetteLines">
+                                <div class="col-lg-12 alert alert-success">
+                                    @ViewBag.Message
+                                </div>
+                            </div>
+                        }
+                    }
                     <form asp-controller="Utilisateur" asp-action="AjouterUtilisateur" method="post">
                         <div class="row">
                             <div class="col-lg-12">
@@ -78,31 +88,35 @@
                             </div>
                         </div>
                     </form>
-        </div>
-    </div>
-    <div class="col-lg-6">
-        <div class="Login">
-            <div class="row">
-                <h2 class="col-lg-12">Se connecter</h2>
+                </div>
             </div>
-            <form asp-controller="Utilisateur" asp-action="ConnectionMdp">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="text" class="form-control" name="nomUtilisateur" placeholder="Votre nom d'utilisateur" />
+            <div class="col-lg-6">
+                <div class="Login">
+                    <div class="row">
+                        <h2 class="col-lg-12">Se connecter</h2>
                     </div>
-                </div>
+                    <form asp-controller="Utilisateur" asp-action="ConnectionMdp">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" name="nomUtilisateur" placeholder="Votre nom d'utilisateur" />
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="password" class="form-control" name="mdp" placeholder="Votre mot de passe" />
-                    </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input type="password" class="form-control" name="mdp" placeholder="Votre mot de passe" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button class="form-control btn btn-default" type="submit">Se connecter</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <button class="form-control btn btn-default" type="submit">Se connecter</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+
+

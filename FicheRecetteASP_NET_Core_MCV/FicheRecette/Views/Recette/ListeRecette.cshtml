@@ -9,6 +9,7 @@
     </div>
 
 
+
     @if (Model.Count == 0)
     {
         <div>
@@ -16,22 +17,21 @@
         </div>
     }
     <div class="row filtre">
-        <form asp-controller="Recette" asp-action="Index" method="get">
+        <form asp-action="Index" asp-controller="Recette" asp-route-NomCategory="NomCategory" method="get">
             <div class="col-lg-9">
-                <select name="IdCategory" class="form-control">
+                <select name="NomCategory" class="form-control">
                     <option></option>
                     @foreach (Category c in (ViewBag.categories as List<Category>))
                     {
-                        <option value="@c.Id">@c.Titre</option>
+                        <option value="@c.Titre">@c.Titre</option>
                     }
                 </select>
             </div>
             <div class="col-lg-3">
-                <button type="submit" class="btn btn-default">Filtrer</button>
+                <button type="submit" class="form-control">Filtrer</button>
             </div>
         </form>
     </div>
-
 
     @foreach (Recette r in Model)
     {

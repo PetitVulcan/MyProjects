@@ -11,36 +11,54 @@
         <div class="row RecetteLine">
             <div class="CorpsRecette">
                 <div class="col-lg-12">
-                    <div class="TitreBlanc">
-                        <h3>Informations :</h3>
+                    <div>
+                        <h3 class="Recette">Informations :</h3>
                     </div>
                     <div class="col-lg-8">
                         <div class="row1">
-                            <div class="col-lg-12">Catégorie :@r.NomCategory</div>
-                        </div>
-                        <div class="row1">
-                            <div class="col-lg-12">Nombre de personne(s) : @r.NbPersonne</div>
-                        </div>
-                        <div class="row1">
-                            <div class="col-lg-12">Niveau de difficulté : @r.Difficulte</div>
-                        </div>
-                        <div class="row1">
-                            <div class="col-lg-12">Ajoutée par : @r.NomUtilisateur</div>
-                        </div>
-                        <div class="row1">
-                            <div class="text-center">
-                                @if (@ViewBag.nom == r.NomUtilisateur)
-                                {
-                                    <button type="submit"><a asp-action="SupprimerRecette" asp-controller="Recette" asp-route-id="@r.Id">Supprimer</a></button>
-                                }
-                            </div>                           
+                            <div class="col-lg-6">
+                                <div class="row1">
+                                    <div class="col-lg-12">Catégorie :@r.NomCategory</div>
+                                </div>
+                                <div class="row1">
+                                    <div class="col-lg-12">Nombre de personne(s) : @r.NbPersonne</div>
+                                </div>
+                                <div class="row1">
+                                    <div class="col-lg-12">Niveau de difficulté : @r.Difficulte</div>
+                                </div>
+                                <div class="row1">
+                                    <div class="col-lg-12">Ajoutée par : @r.NomUtilisateur</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="Titre">
+                                    @if (@ViewBag.Nom == "Admin")
+                                    {
+                                        <div class="col-lg-6">
+                                            <button class="TitreCentrer" type="submit"><a asp-action="" asp-controller="Recette" asp-route-id="@r.Id">Modifier</a></button>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <button class="TitreCentrer" type="submit"><a asp-action="SupprimerRecette" asp-controller="Recette" asp-route-id="@r.Id">Supprimer</a></button>
+                                        </div>
+                                    }
+                                    @if (@ViewBag.nom == r.NomUtilisateur)
+                                    {
+
+                                        <div class="col-lg-6">
+                                            <button class="TitreCentrer" type="submit"><a asp-action="" asp-controller="Recette" asp-route-id="@r.Id">Modifier</a></button>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <button class="TitreCentrer" type="submit"><a asp-action="SupprimerRecette" asp-controller="Recette" asp-route-id="@r.Id">Supprimer</a></button>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 imagedroite">
                         <div class="imgFiche">
                             <img src="~/@r.Images[0].Url" />
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -48,9 +66,12 @@
         <div class="row RecetteLine">
             <div class="row1">
                 <div class="col-lg-12">
-                    <div class="TitreBlanc">
-                        <h3>Ingrédients : </h3>
-                    </div>@r.Ingredient
+                    <div>
+                        <h3 class="Recette">Ingrédients : </h3>
+                    </div>
+                    <div class="row1">
+                        @r.Ingredient
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,7 +79,10 @@
         <div class="row RecetteLine">
             <div class="row1">
                 <div class="col-lg-12">
-                    <div class="TitreBlanc"><h3>Réalisation : </h3></div>@r.Realisation
+                    <div><h3 class="Recette">Réalisation : </h3></div>
+                    <div class="row1">
+                        @r.Realisation
+                    </div>
                 </div>
             </div>
         </div>

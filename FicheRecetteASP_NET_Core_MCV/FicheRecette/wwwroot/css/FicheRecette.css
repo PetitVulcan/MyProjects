@@ -49,13 +49,13 @@ footer {
     padding-top: 10px;
     color: #494949;
     text-align: center;
-    font-family: Virginie
+    font-family: Virginie;    
 }
-.TitreBlanc {
-    
-    width:100%;
-    color: white;
-    font-family: Virginie
+.TitreCentrer {
+    width: 100%;
+    font-family: Virginie;
+    text-align: center;
+    background-color:#EFEFEF;
 }
 
 .wrapper {
@@ -79,12 +79,12 @@ h2 {
     margin: 15px;
 }
 h3 {
-    color: white;
+    padding-left:10px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-right: 15px;
     margin-left: 15px;
-    background-color: #494949;
+    
     box-shadow: 0 0 5px #999;
     font-family: Virginie
 }
@@ -143,6 +143,16 @@ centerimages {
     border: 1px solid gray;
     margin-top: 5px;    
     background-color: #EFEFEF;
+}
+    .Recette h3 {
+        font-family: Virginie;
+        padding-top: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+.RecetteLines {
+    margin: 10px;
+    padding: 10px;
 }
 .RecetteLine {
     text-decoration: none;

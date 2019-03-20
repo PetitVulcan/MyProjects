@@ -10,12 +10,14 @@ namespace FicheRecette.Controllers
 {
     public class RecetteController : Controller
     {
-        public IActionResult Index(int? IdCategory)
+        [ActionName("Index")]
+        [HttpGet]
+        public IActionResult ListeRecetteTri(string NomCategory)
         {
             UserConnect(ViewBag);
             ViewBag.categories = Category.GetCategories();
-            List<Recette> liste = Recette.AvoirListeRecette(IdCategory);
-            return View(viewName: "ListeRecette", model: liste);
+            List<Recette> liste = Recette.AvoirListeRecetteTri(NomCategory);
+            return View("ListeRecette", model: liste);
         }
 
         [Route("Recette/Lister")]
@@ -27,7 +29,7 @@ namespace FicheRecette.Controllers
             return View("ListeRecette", listeRecette);
         }
 
-        [Route("[Controller]/{id?}")]
+        //[Route("[Controller]/{id?}")]
         public IActionResult Detail(int Id)
         {
             UserConnect(ViewBag);

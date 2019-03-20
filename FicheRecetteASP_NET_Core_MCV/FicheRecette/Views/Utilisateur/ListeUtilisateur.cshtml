@@ -15,38 +15,52 @@
             }
             @foreach (Utilisateur u in Model)
             {
-                <div>
-                    Nom d'utilisateur : @u.NomUtilisateur  - Adresse email : @u.EMail - Nombre de recettes(s) crée(s) :  @u.NbRecettecree - Administrateur : @u.Admin - <a asp-action="SupprimerUtilsateur" asp-controller="Utilisateur" asp-route-id="@u.Id">Supprimer</a>
-                </div>
-            }
+                @if (ViewBag.Nom == "Admin")
+                {
+                    <div>
+                        Nom d'utilisateur : @u.NomUtilisateur  - Nombre de recettes(s) crée(s) :  @u.NbRecettecree - Adresse email : @u.EMail - Administrateur : @u.Admin -
+                        <a asp-action="SupprimerUtilsateur" asp-controller="Utilisateur" asp-route-id="@u.Id">Supprimer</a>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        Nom d'utilisateur : @u.NomUtilisateur  - Nombre de recettes(s) crée(s) :  @u.NbRecettecree 
+                    </div>                   
+                }
+}
         </div>
     </div>
-    <div class="Titre"><h2>Ajouter un Utilisateur</h2></div>
-    <div class="row RecetteLine">
-        <form asp-action="AjouterUtilisateur" asp-controller="Utilisateur" method="post">
-            <div>
-                <label>Nom : </label>
-                <input type="text" name="Nom" />
-                <label>Prénom : </label>
-                <input type="text" name="Prenom" />
-                <label>Nom d'Utilisateur : </label>
-                <input type="text" name="NomUtilisateur" />
-                <label>email : </label>
-                <input type="text" name="Email" />
-                <label>Mot de Passe : </label>
-                <input type="password" name="Mdp" />
-                <label>Confirmer le mot de passe : </label>
-                <input type="password" name="cMdp" />
-                <label>Administrateur : </label>
-                <select type="text" name="Admin" size="1" value="Admin">
-                    <option value="true">Oui</option>
-                    <option value="false">Non</option>                    
-                </select>
-            </div>
-            <div>
-                <button type="submit">Ajouter</button>
-            </div>
-        </form>
-    </div>
+    @if (ViewBag.Nom == "Admin")
+    {
+        <div class="Titre"><h2>Ajouter un Utilisateur</h2></div>
+        <div class="row RecetteLine">
+            <form asp-action="AjouterUtilisateur" asp-controller="Utilisateur" method="post">
+                <div>
+                    <label>Nom : </label>
+                    <input type="text" name="Nom" />
+                    <label>Prénom : </label>
+                    <input type="text" name="Prenom" />
+                    <label>Nom d'Utilisateur : </label>
+                    <input type="text" name="NomUtilisateur" />
+                    <label>email : </label>
+                    <input type="text" name="Email" />
+                    <label>Mot de Passe : </label>
+                    <input type="password" name="Mdp" />
+                    <label>Confirmer le mot de passe : </label>
+                    <input type="password" name="cMdp" />
+                    <label>Administrateur : </label>
+                    <select type="text" name="Admin" size="1" value="Admin">
+                        <option value="true">Oui</option>
+                        <option value="false">Non</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    }
+
 </div>
 

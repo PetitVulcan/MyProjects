@@ -136,6 +136,61 @@ namespace FicheRecette.Tools
             return listeRecette;
         }
 
+        public List<Recette> AvoirListeRecetteTri(string NomCategory)
+        {
+            List<Recette> listeRecette = new List<Recette>();
+            SqlCommand command;
+            if (NomCategory == null)
+            {
+                command = new SqlCommand("SELECT * From Recette ", Connection.Instance);
+                Connection.Instance.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Recette r = new Recette { NomCategory = reader.GetString(8), Id = reader.GetInt32(0), NomRecette = reader.GetString(3), NbPersonne = reader.GetInt32(4), Difficulte = reader.GetString(5), NomUtilisateur = reader.GetString(2), Date = reader.GetDateTime(1), };
+                    listeRecette.Add(r);
+
+                }
+                reader.Close();
+                command.Dispose();
+            }
+            else
+            {
+                command = new SqlCommand("SELECT Id, nomrecette, nbpersonne, difficulte, nomutilisateur, date From recette WHERE nomcategory = @NomCategory", Connection.Instance);
+                command.Parameters.Add(new SqlParameter("@NomCategory", SqlDbType.VarChar) { Value = NomCategory });
+                Connection.Instance.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    Recette r = new Recette { Id = reader.GetInt32(0), NomRecette = reader.GetString(1), NbPersonne = reader.GetInt32(2), Difficulte = reader.GetString(3), NomUtilisateur = reader.GetString(4), Date = reader.GetDateTime(5)};
+                    r.NomCategory = @NomCategory;
+                    listeRecette.Add(r);
+
+                }
+                reader.Close();
+                command.Dispose();
+
+            }
+
+            for (int i = 0; i < listeRecette.Count; i++)
+            {
+
+                command = new SqlCommand("SELECT Id, Urlimage from images WHERE Idrecette = @IdRecette", Connection.Instance);
+                command.Parameters.Add(new SqlParameter("@IdRecette", listeRecette[i].Id));
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    listeRecette[i].Images.Add(new ImageRecette { Id = reader.GetInt32(0), Url = reader.GetString(1) });
+                }
+                reader.Close();
+                command.Dispose();
+
+            }
+            Connection.Instance.Close();
+            return listeRecette;
+        }
+
         public List<Recette> AfficherRecette(int Id)
         {
 

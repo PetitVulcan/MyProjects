@@ -50,23 +50,34 @@
         }
         @foreach (Category c in Model)
         {
-            <div>
-                Nom :@c.Titre
-                <a asp-action="DeleteCategory" asp-controller="Recette" asp-route-id="@c.Id"> - Supprimer</a>
-            </div>
+            @if (ViewBag.Nom == "Admin")
+            {
+                <div>
+                    Nom de la catégorie : @c.Titre - <a asp-action="DeleteCategory" asp-controller="Recette" asp-route-id="@c.Id"> - Supprimer</a>
+                </div>
+            }
+            else
+            {
+                <div>
+                    Nom de la catégorie : @c.Titre
+                </div>
+            }
+
         }
 
     </div>
-
-    <div class="Titre"><h2>Ajouter une Catégorie</h2></div>
-    <form asp-action="RegisterCategory" asp-controller="recette" method="post">
-        <div class="row RecetteLine">
-            <label>Nom de la Catégorie : </label>
-            <div class="row1">
-                <input type="text" name="Titre" />
-                <button type="submit">Ajouter</button>
+    @if (ViewBag.Nom == "Admin")
+    {
+        <div class="Titre"><h2>Ajouter une Catégorie</h2></div>
+        <form asp-action="RegisterCategory" asp-controller="recette" method="post">
+            <div class="row RecetteLine">
+                <label>Nom de la Catégorie : </label>
+                <div class="row1">
+                    <input type="text" name="Titre" />
+                    <button type="submit">Ajouter</button>
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    }
 </div>
 
