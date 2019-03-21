@@ -65,6 +65,32 @@ namespace FicheRecette.Tools
             return;
         }
 
+        public void ModifierRecette(Recette r)
+        {
+            SqlCommand command = new SqlCommand("Update INTO recette (date,nomutilisateur,nomrecette,nbpersonne,difficulte,ingredient,realisation,nomcategory) OUTPUT INSERTED.id values(@Date,@NomUtilisateur,@NomRecette,@NbPersonne,@Difficulte,@Ingredient,@Realisation,@NomCategory) WHERE Id = @Id", Connection.Instance);
+            command.Parameters.Add(new SqlParameter("@Idate", SqlDbType.Int) { Value = r.Id });
+            command.Parameters.Add(new SqlParameter("@NomUtilisateur", SqlDbType.VarChar) { Value = r.NomUtilisateur });
+            command.Parameters.Add(new SqlParameter("@NomRecette", SqlDbType.VarChar) { Value = r.NomRecette });
+            command.Parameters.Add(new SqlParameter("@NbPersonne", SqlDbType.Int) { Value = r.NbPersonne });
+            command.Parameters.Add(new SqlParameter("@Difficulte", SqlDbType.VarChar) { Value = r.Difficulte });
+            command.Parameters.Add(new SqlParameter("@Ingredient", SqlDbType.NText) { Value = r.Ingredient });
+            command.Parameters.Add(new SqlParameter("@Realisation", SqlDbType.NText) { Value = r.Realisation });
+            command.Parameters.Add(new SqlParameter("@NomCategory", SqlDbType.VarChar) { Value = r.NomCategory });
+            Connection.Instance.Open();
+            r.Id = (int)command.ExecuteScalar();
+            command.Dispose();
+            foreach (ImageRecette img in r.Images)
+            {
+                command = new SqlCommand("Update INTO images (urlimage) values(@Url,@Idrecette) WHERE Idrecette = @Id", Connection.Instance);
+                command.Parameters.Add(new SqlParameter("@Url", img.Url));
+                command.Parameters.Add(new SqlParameter("@Id", r.Id));
+                command.ExecuteNonQuery();
+                command.Dispose();
+            }
+            Connection.Instance.Close();
+            return;
+        }
+
 
         public void SupprimerRecette(Recette r)
         {

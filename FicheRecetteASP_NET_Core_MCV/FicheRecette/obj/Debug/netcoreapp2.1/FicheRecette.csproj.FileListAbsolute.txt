@@ -193,3 +193,4 @@ C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.dll
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.pdb
 C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\FicheRecette.csproj.CopyComplete
+C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\obj\Debug\netcoreapp2.1\Razor\Views\Recette\ModifierRecette.g.cshtml.cs

@@ -11,25 +11,26 @@ CREATE TABLE [dbo].[utilisateur] (
     [email]          VARCHAR (50) NULL,
     [nbrecettecree]  INT          NULL,
     [mdp]            VARCHAR (50) NULL,
+    [admin]          VARCHAR (10) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
-
 
 
 //Table Recettes
 
 CREATE TABLE [dbo].[recette] (
-    [Id]             INT          IDENTITY (1, 1) NOT NULL,
-    [date]           DATETIME     NULL,
-    [nomutilisateur] VARCHAR (20) NULL,
-    [nomrecette]     VARCHAR (50) NULL,
-    [nbpersonne]     INT          NULL,
-    [difficulte]     VARCHAR (5)  NULL,
-    [ingredient]     NTEXT        NULL,
-    [realisation]    NTEXT        NULL,
-    [IdCategory]     INT          NULL,
+    [Id]             INT           IDENTITY (1, 1) NOT NULL,
+    [date]           DATETIME      NULL,
+    [nomutilisateur] VARCHAR (20)  NULL,
+    [nomrecette]     VARCHAR (100) NULL,
+    [nbpersonne]     INT           NULL,
+    [difficulte]     VARCHAR (5)   NULL,
+    [ingredient]     NTEXT         NULL,
+    [realisation]    NTEXT         NULL,
+    [nomcategory]    VARCHAR (50)  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
 
 
 
@@ -106,22 +107,16 @@ CREATE TABLE [dbo].[images] (
 
 INSERT INTO images (Idrecette,urlimage)
 VALUES
-( 1 ,'images/recette/1-Kao_Pad_Kai.jpg'),
-( 2 ,'images/recette/2-Sole_Riesling.jpg'),
-( 3 ,'images/recette/3-spaghetti_bolognese.jpg'),
-( 4 ,'images/recette/4-Chili_sin_carne.jpg'),
-( 5 ,'images/recette/5-Gigot_de_7_heures.jpg'),
-( 6 ,'images/recette/6-Spaghetti_alla_Carbonara.jpg'),
-( 7 ,'images/recette/7-Tempura_de_gambas.jpg'),
-( 8 ,'images/recette/8-Poulet_Curry_Jaune.jpg'),
-( 19,'images/recette/19-SaintJacquesTruffe.jpg');
-
-
-
-
-
-
-
+( 1 ,'images/recette/Cuisine Italienne-Spaghetti_Alla_Bolognese.jpg'),
+( 2 ,'images/recette/Cuisine Française-Gigot_7_Heures.jpg'),
+( 3 ,'images/recette/Cuisine Française-St_Jacques_Truffe.jpg'),
+( 4 ,'images/recette/Cuisine Thaï-Khao_Pad_Kai.jpg'),
+( 5 ,'images/recette/Cuisine Mexicaine-Chilli_sin_Carne.jpg'),
+( 6 ,'images/recette/Cuisine Française-Sole_Riesling.jpg'),
+( 7 ,'images/recette/Cuisine Italienne-Spaghetti_Alla_Carbonara.jpg'),
+( 8 ,'images/recette/Cuisine du Monde-Toninos_Burger.jpg'),
+( 9 ,'images/recette/Cuisine Japonaise-Tempura_de_gambas.jpg'),
+( 10 ,'images/recette/Cuisine Thaï-Poulet_Curry_Jaune_Thai.jpg');
 
 
 
