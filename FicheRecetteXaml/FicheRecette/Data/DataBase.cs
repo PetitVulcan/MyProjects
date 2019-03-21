@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using FicheRecette.Utilisateur;
 
 
 namespace FicheRecette.Classe
@@ -147,7 +148,7 @@ namespace FicheRecette.Classe
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
-                u = new Utilisateur() { NomUtilisateur = reader.GetString(3) };
+                u = new Utilisateur() { NomUtilisateur = reader.GetString(4) };
             }
             reader.Close();
             command.Dispose();

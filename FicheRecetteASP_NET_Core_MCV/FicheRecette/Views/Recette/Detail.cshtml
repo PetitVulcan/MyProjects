@@ -31,28 +31,8 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="Titre">
-                                    @if (@ViewBag.Nom == "Admin")
-                                    {
-                                        <div class="col-lg-6">
-                                            <button class="TitreCentrer" type="submit"><a asp-action="ModifierRecette" asp-controller="Recette" asp-route-id="@r.Id">Modifier</a></button>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <button class="TitreCentrer" type="submit"><a asp-action="SupprimerRecette" asp-controller="Recette" asp-route-id="@r.Id">Supprimer</a></button>
-                                        </div>
-                                    }
-                                    @if (@ViewBag.nom == r.NomUtilisateur)
-                                    {
+                                
 
-                                        <div class="col-lg-6">
-                                            <button class="TitreCentrer" type="submit"><a asp-action="ModifierRecette" asp-controller="Recette" asp-route-id="@r.Id">Modifier</a></button>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <button class="TitreCentrer" type="submit"><a asp-action="SupprimerRecette" asp-controller="Recette" asp-route-id="@r.Id">Supprimer</a></button>
-                                        </div>
-                                    }
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 imagedroite">
@@ -86,6 +66,29 @@
                 </div>
             </div>
         </div>
+        <div class="row RecetteLine">
+            <div class="Titre">
+                @if (@ViewBag.Nom == "Admin")
+                {
+                    @*<div class="col-lg-6">
+                        <button class="TitreCentrer" type="submit"><a asp-action="ModifierRecette" asp-controller="Recette" asp-route-id="@r.Id">Modifier</a></button>
+                    </div>*@
+                    <div class="col-lg-6">
+                        <button class="TitreCentrer" type="submit"><a asp-action="SupprimerRecette" asp-controller="Recette" asp-route-id="@r.Id">Supprimer</a></button>
+                    </div>
+                }
+                @if (@ViewBag.nom == r.NomUtilisateur)
+                {
+
+                    @*<div class="col-lg-6">
+                        <button class="TitreCentrer" type="submit"><a asp-action="ModifierRecette" asp-controller="Recette" asp-route-id="@r.Id">Modifier</a></button>
+                    </div>*@
+                    <div class="col-lg-6">
+                        <button class="TitreCentrer" type="submit"><a asp-action="SupprimerRecette" asp-controller="Recette" asp-route-id="@r.Id">Supprimer</a></button>
+                    </div>
+                }
+            </div>
+        </div></div>
     }
 </div>
 

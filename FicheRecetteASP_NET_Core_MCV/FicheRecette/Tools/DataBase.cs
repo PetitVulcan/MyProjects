@@ -99,7 +99,7 @@ namespace FicheRecette.Tools
             Connection.Instance.Open();
             command.ExecuteScalar();
             command.Dispose();
-            SqlCommand command2 = new SqlCommand("DELETE  FROM images WHERE Idrecette=@Id", Connection.Instance);
+            SqlCommand command1 = new SqlCommand("DELETE  FROM images WHERE Idrecette=@Id", Connection.Instance);
             //command.Parameters.Add(new SqlParameter("@Id", r.Id));
             command.ExecuteNonQuery();
             command.Dispose();
