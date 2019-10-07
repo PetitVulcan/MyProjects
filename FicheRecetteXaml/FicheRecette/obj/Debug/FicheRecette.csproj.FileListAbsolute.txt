@@ -54,3 +54,4 @@ C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette
 C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette.exe
 C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette.pdb
 C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\Utilisateur\Login.g.cs
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette_Content.g.cs

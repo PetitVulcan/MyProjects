@@ -24,7 +24,7 @@ namespace FicheRecette.Classe
                 {
                     if (_instance == null)
                     {
-                        _instance = new SqlConnection(@"Data Source=DESKTOP-RI59KG6\SQLEXPRESS;Initial Catalog=ListeRecette;Integrated Security=True");
+                        _instance = new SqlConnection(@"Data Source=(LOCALDB)\listerecette;Integrated Security=True");
                     }
                     return _instance;
                 }
