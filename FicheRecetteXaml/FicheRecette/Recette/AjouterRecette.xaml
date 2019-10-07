@@ -19,15 +19,15 @@
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Foreground="#FFFFFEFE" FontSize="10" FontWeight="Normal">Difficulté</Label>
-                                    <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="150" Text="{Binding Path=Difficulte}"></TextBox>
+                                    <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="150" Text="{Binding Difficulte}"></TextBox>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Foreground="#FFFFFEFE" FontSize="10" FontWeight="Normal">NbPersonne</Label>
-                                    <TextBox VerticalContentAlignment="Stretch" Width="144" HorizontalAlignment="Right" Text="{Binding Path=NbPersonne}"/>
+                                    <TextBox VerticalContentAlignment="Stretch" Width="144" HorizontalAlignment="Right" Text="{Binding NbPersonne}"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <Label Foreground="#FFFFFEFE" FontSize="10" FontWeight="Normal">Nom Utilisateur</Label>
-                                    <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="110" Text="{Binding Path=NomUtilisateur}"></TextBox>
+                                    <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="110" Text="{Binding NomUtilisateur}"></TextBox>
                                 </StackPanel>
                             </StackPanel>
                             <StackPanel Margin="5,0,5,5">
@@ -43,10 +43,10 @@
                     </GroupBox>
 
                     <GroupBox Header="Ingrédients" FontFamily="Virginie" FontWeight="Normal" FontSize="12" Foreground="#FFFBFAFA" Height="98" >
-                        <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="358" Margin="0,0,0,2" Text="{Binding Path=Ingredient}"/>
+                        <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="358" Margin="0,0,0,2" Text="{Binding Ingredient}"/>
                     </GroupBox>
                     <GroupBox Header="Réalisation" FontFamily="Virginie" FontWeight="Normal" FontSize="12" Foreground="#FFFBFAFA" Height="256" >
-                        <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="358" Margin="0,0,0,3" Text="{Binding Path=Realisation}"/>
+                        <TextBox HorizontalAlignment="Right" VerticalContentAlignment="Stretch" Width="358" Margin="0,0,0,3" Text="{Binding Realisation}"/>
                     </GroupBox>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 

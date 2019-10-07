@@ -139,22 +139,22 @@ namespace FicheRecette.Classe
             return id;
         }
 
-        public Utilisateur UtilisateurExist(string NomUtilisateur)
-        {
-            Utilisateur u = null;
-            SqlCommand command = new SqlCommand("SELECT * FROM utilisateur WHERE nomutilisateur = @NomUtilisateur ", Connection.Instance);
-            command.Parameters.Add(new SqlParameter("@NomUtilisateur", SqlDbType.VarChar) { Value = NomUtilisateur });
-            Connection.Instance.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            if (reader.Read())
-            {
-                u = new Utilisateur() { NomUtilisateur = reader.GetString(4) };
-            }
-            reader.Close();
-            command.Dispose();
-            Connection.Instance.Close();
-            return u;
-        }
+        //public Utilisateur UtilisateurExist(string NomUtilisateur)
+        //{
+        //    Utilisateur u = null;
+        //    SqlCommand command = new SqlCommand("SELECT * FROM utilisateur WHERE nomutilisateur = @NomUtilisateur ", Connection.Instance);
+        //    command.Parameters.Add(new SqlParameter("@NomUtilisateur", SqlDbType.VarChar) { Value = NomUtilisateur });
+        //    Connection.Instance.Open();
+        //    SqlDataReader reader = command.ExecuteReader();
+        //    if (reader.Read())
+        //    {
+        //        u = new Utilisateur() { NomUtilisateur = reader.GetString(4) };
+        //    }
+        //    reader.Close();
+        //    command.Dispose();
+        //    Connection.Instance.Close();
+        //    return u;
+        //}
                      
         public List<Recette> ConsulterListeRecette()
         {

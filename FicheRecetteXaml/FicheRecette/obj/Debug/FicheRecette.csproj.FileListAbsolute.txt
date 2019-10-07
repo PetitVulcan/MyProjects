@@ -43,3 +43,14 @@ C:\Users\diper\Documents\Programation\Projets Personnels\FichesRecetteXaml\Fiche
 C:\Users\diper\Documents\Programation\Projets Personnels\FichesRecetteXaml\FicheRecette\FicheRecette\obj\Debug\FicheRecette_MarkupCompile.lref
 C:\Users\diper\Documents\Programation\Projets Personnels\FichesRecetteXaml\FicheRecette\FicheRecette\obj\Debug\FicheRecette.exe
 C:\Users\diper\Documents\Programation\Projets Personnels\FichesRecetteXaml\FicheRecette\FicheRecette\obj\Debug\FicheRecette.pdb
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette.csprojAssemblyReference.cache
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette.exe.config
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\Recette\AjouterRecette.g.cs
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\Utilisateur\AjouterUtilisateur.g.cs
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\MainWindow.g.cs
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\App.g.cs
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette_MarkupCompile.cache
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette_MarkupCompile.lref
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette.exe
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\FicheRecette.pdb
+C:\Users\diper\Source\Repos\PetitVulcan\MyProjects\FicheRecetteXaml\FicheRecette\obj\Debug\Utilisateur\Login.g.cs

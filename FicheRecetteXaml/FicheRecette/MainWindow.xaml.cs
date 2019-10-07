@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FicheRecette.Classe;
+using FicheRecette.Recette;
 
 namespace FicheRecette
 {
@@ -21,13 +22,12 @@ namespace FicheRecette
     {
         public MainWindow()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
 
         private void Se_Loger_Click(object sender, RoutedEventArgs e)
         {
-             Login.ShowDialog();
+            
         }
 
         private void AddClient_Click(object sender, RoutedEventArgs e)
@@ -37,7 +37,8 @@ namespace FicheRecette
 
         private void AjouterRecette_Click(object sender, RoutedEventArgs e)
         {
-            
+            AjouterRecette addNewAjouterRecette = new AjouterRecette();
+            addNewAjouterRecette.Show();
         }
     }
 }

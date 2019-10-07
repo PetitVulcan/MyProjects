@@ -16,12 +16,12 @@ using System.Windows.Shapes;
 namespace FicheRecette
 {
    
-    public partial class AjouterUtilisateur : Window, IClosable
+    public partial class AjouterUtilisateur : Window
     {
-        public ConnectionUtilisateur()
-        {
-            InitializeComponent();
-            this.DataContext = new AjouterUtilisateurViewModel(this);
-        }
+        //public ConnectionUtilisateur()
+        //{
+        //    InitializeComponent();
+        //    this.DataContext = new AjouterUtilisateurViewModel(this);
+        //}
     }
 }

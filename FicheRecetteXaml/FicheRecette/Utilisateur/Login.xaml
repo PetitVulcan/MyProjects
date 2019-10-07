@@ -27,7 +27,7 @@
                 
                 <Label Foreground="#FFFFFEFE" FontSize="12" FontWeight="Normal">Mot de passe</Label>
 
-                    <TextBox HorizontalAlignment="Top" VerticalContentAlignment="Stretch" Width="170" Text="{Binding Path=Mdp}"></TextBox>
+                    <TextBox HorizontalAlignment="Center" VerticalContentAlignment="Stretch" Width="170" Text="{Binding Path=Mdp}"></TextBox>
                 
             </StackPanel>
                 
@@ -35,7 +35,7 @@
                     
                     <Button Content="Valider" Margin="5,0" Background="#FFA2A5B0" Foreground="#FFFBF7F7" BorderBrush="#FFF7F4F4"/>
                     
-                <Button Content="S'inscrire" Margin="5,0" Foreground="#FFFBF5F5" BorderBrush="#FFF9F5F5" Background="#FFA2A5B0" Click=""/>
+                    <Button Content="S'inscrire" Margin="5,0" Foreground="#FFFBF5F5" BorderBrush="#FFF9F5F5" Background="#FFA2A5B0"/>
                     
                 </StackPanel>
                 
