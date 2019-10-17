@@ -19,7 +19,7 @@ namespace FicheRecette.Tools
                 {
                     if (_instance == null)
                     {
-                        _instance = new SqlConnection(@"Data Source=DESKTOP-RI59KG6\SQLEXPRESS;Initial Catalog=ListeRecette;Integrated Security=True");
+                        _instance = new SqlConnection(@"Data Source=(LocalDB)\ficherecette;Integrated Security=True");
                     }
                     return _instance;
                 }
