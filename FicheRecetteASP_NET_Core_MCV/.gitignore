@@ -329,4 +329,4 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 # Connection.cs
-bibliothequeado.net/Tools/Connection.cs
+FicheRecette/Tools/Connection.cs
