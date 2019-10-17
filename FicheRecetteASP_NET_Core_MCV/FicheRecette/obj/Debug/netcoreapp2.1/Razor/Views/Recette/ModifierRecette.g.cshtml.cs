@@ -129,7 +129,7 @@ using FicheRecette.Model;
             WriteLiteral("        </div>\r\n    </div>\r\n\r\n    ");
             EndContext();
             BeginContext(1094, 3855, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7c3452af6c8147ffb697c2706d1eb4c1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "60fa214feb0c4e9092728439f20d1f61", async() => {
                 BeginContext(1235, 313, true);
                 WriteLiteral(@"
         <div class=""row RecetteLine"">
@@ -167,7 +167,7 @@ WriteAttributeValue("", 1845, Model.NomCategory, 1845, 18, false);
                 WriteLiteral(">\r\n                        ");
                 EndContext();
                 BeginContext(1891, 17, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9dd05d37235a437a814c179dc13b19dc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34207935173541a097bb32a0980fb789", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -193,7 +193,7 @@ WriteAttributeValue("", 1845, Model.NomCategory, 1845, 18, false);
                 WriteLiteral("                            ");
                 EndContext();
                 BeginContext(2049, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c86560d35fe046f5abdebae4c9fb3a50", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b4012185a3e4b9d882e305b97126405", async() => {
                     BeginContext(2075, 7, false);
 #line 50 "C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\Views\Recette\ModifierRecette.cshtml"
                                                 Write(c.Titre);
@@ -244,7 +244,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral(">\r\n                    ");
                 EndContext();
                 BeginContext(2408, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fa5c7323787b4c19b23737c8f84bd424", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19ea4c20e2234b95a396cdc020144c29", async() => {
                     BeginContext(2426, 1, true);
                     WriteLiteral("1");
                     EndContext();
@@ -266,7 +266,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2458, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb268df9ced04667a7e7282fd665c2ae", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e23e1b95504940e885ed33c0942f292d", async() => {
                     BeginContext(2476, 1, true);
                     WriteLiteral("2");
                     EndContext();
@@ -288,7 +288,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2508, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "087d146baf0b402ea14bb550b49d47c2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51eab336cd264679b4f30dc26dabe2d8", async() => {
                     BeginContext(2526, 1, true);
                     WriteLiteral("3");
                     EndContext();
@@ -310,7 +310,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2558, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e64ccebc74ac4d83998e9d2956eda394", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4255f932d204ea2adff6a13e806684e", async() => {
                     BeginContext(2576, 1, true);
                     WriteLiteral("4");
                     EndContext();
@@ -332,7 +332,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2608, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f0d88563e0024b57a3d4eb964596a338", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f60d29fc07b45348890910d463446e2", async() => {
                     BeginContext(2626, 1, true);
                     WriteLiteral("5");
                     EndContext();
@@ -354,7 +354,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2658, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c8e52a216c444f5b0aa1d00b24bb804", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c70ceeadb222493fb6b8d86096b5154e", async() => {
                     BeginContext(2676, 1, true);
                     WriteLiteral("6");
                     EndContext();
@@ -376,7 +376,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2708, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ab0f2f48ef9444c90d50782a51ca9ba", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb81120d3f6444cb1c7bb23b28be9af", async() => {
                     BeginContext(2726, 1, true);
                     WriteLiteral("7");
                     EndContext();
@@ -398,7 +398,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2758, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c7e8566bd254be0abe1f3a72463d55e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bcc90d71684846abb4b56d05a89fa6c9", async() => {
                     BeginContext(2776, 1, true);
                     WriteLiteral("8");
                     EndContext();
@@ -420,7 +420,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2808, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e823d286d774808ad07005e672c67f2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "012740e72d84471d8668103180f1fff2", async() => {
                     BeginContext(2826, 1, true);
                     WriteLiteral("9");
                     EndContext();
@@ -442,7 +442,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2858, 30, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8aef799a946b40489fc43798fdacc7ef", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b196d7f0bdc4af987c4d8f3f1ab3380", async() => {
                     BeginContext(2877, 2, true);
                     WriteLiteral("10");
                     EndContext();
@@ -464,7 +464,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2910, 30, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "79bd2bca05f34be2b4ae71ebd8bca038", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8517b79aa6ed48d0891845b970dd6d71", async() => {
                     BeginContext(2929, 2, true);
                     WriteLiteral("11");
                     EndContext();
@@ -486,7 +486,7 @@ WriteAttributeValue("", 2367, Model.NbPersonne, 2367, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(2962, 30, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5c5fe60f7db4457bcc4c09d20247e6a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0fca1669fc54bb9b093446506743d2d", async() => {
                     BeginContext(2981, 2, true);
                     WriteLiteral("12");
                     EndContext();
@@ -518,7 +518,7 @@ WriteAttributeValue("", 3216, Model.Difficulte, 3216, 17, false);
                 WriteLiteral(">\r\n                    ");
                 EndContext();
                 BeginContext(3257, 28, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c750f90be055429da31ed7ecdfbf1eaf", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7960303aff4e47fa99e92318a1f8afe9", async() => {
                     BeginContext(3275, 1, true);
                     WriteLiteral("*");
                     EndContext();
@@ -540,7 +540,7 @@ WriteAttributeValue("", 3216, Model.Difficulte, 3216, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(3307, 30, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fcad89c2cec741cc9455ab7ae6b2ae1d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c7144c79aa14a34b277ee8f24e56e07", async() => {
                     BeginContext(3326, 2, true);
                     WriteLiteral("**");
                     EndContext();
@@ -562,7 +562,7 @@ WriteAttributeValue("", 3216, Model.Difficulte, 3216, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(3359, 32, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "02146d485a734aa6ad89994398deb94a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0bf3957e04b046eaaaf0df6b352265bd", async() => {
                     BeginContext(3379, 3, true);
                     WriteLiteral("***");
                     EndContext();
@@ -584,7 +584,7 @@ WriteAttributeValue("", 3216, Model.Difficulte, 3216, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(3413, 34, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3255cfd1545484b826f552840822906", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "185bba0a4a1343288c62d378af75843d", async() => {
                     BeginContext(3434, 4, true);
                     WriteLiteral("****");
                     EndContext();
@@ -606,7 +606,7 @@ WriteAttributeValue("", 3216, Model.Difficulte, 3216, 17, false);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(3469, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "64580744b0004b8094274a043e3a6986", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f243c8e05ed44b469546149ddbda9a6a", async() => {
                     BeginContext(3491, 5, true);
                     WriteLiteral("*****");
                     EndContext();

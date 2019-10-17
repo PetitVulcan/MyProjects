@@ -84,12 +84,12 @@ using FicheRecette.Model;
             WriteLiteral("    <div class=\"row filtre\">\r\n        ");
             EndContext();
             BeginContext(357, 636, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "63899d576ada4846afa5e593be310677", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "524c242cff5143a39f37758a94d2740d", async() => {
                 BeginContext(456, 124, true);
                 WriteLiteral("\r\n            <div class=\"col-lg-9\">\r\n                <select name=\"NomCategory\" class=\"form-control\">\r\n                    ");
                 EndContext();
                 BeginContext(580, 17, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6878e5cabe654ad1bb72db7c13f01fe0", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5a9afce222e54d0b9b15220a0b0ac51b", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_OptionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper>();
@@ -115,7 +115,7 @@ using FicheRecette.Model;
                 WriteLiteral("                        ");
                 EndContext();
                 BeginContext(731, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0de54cdd50574bdc93e7b88a7d74927a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bcd3c99064bd401f9c4635b6ab60ce89", async() => {
                     BeginContext(757, 7, false);
 #line 26 "C:\Users\diper\source\repos\PetitVulcan\MyProjects\FicheRecetteASP_NET_Core_MCV\FicheRecette\Views\Recette\ListeRecette.cshtml"
                                             Write(c.Titre);
@@ -195,7 +195,7 @@ using FicheRecette.Model;
             WriteLiteral("        <div class=\"row RecetteLine\">\r\n            <div class=\"col-lg-2 centerimages\">\r\n                <div class=\"imgRecette\">\r\n                    ");
             EndContext();
             BeginContext(1203, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "080bd15acfc14e029e1fae1d08e3f926", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d308f51acdc04a2eaa5150d9c5ff8671", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -220,7 +220,7 @@ AddHtmlAttributeValue("", 1215, r.Images[0].Url, 1215, 16, false);
             WriteLiteral("\r\n                </div>\r\n            </div>\r\n            <div class=\"col-lg-7\">\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(1372, 129, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a4969ad8c9a443f59570979247172d11", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "258d505b59294a1f80c840fc6694aa6c", async() => {
                 BeginContext(1441, 37, true);
                 WriteLiteral(" <div class=\"col-lg-12 titreRecette\">");
                 EndContext();
